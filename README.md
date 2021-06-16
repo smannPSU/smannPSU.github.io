@@ -1,3 +1,3 @@
-# smann.ddns.net
-My online website
-index.html is the landing page for this
+# smannPSU.github.io
+My online website.
+The landing page is index.html.
