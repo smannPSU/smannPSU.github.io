@@ -1,0 +1,89 @@
+/* Tab button styling */
+<style>
+	/* Style the overall navigation bar */
+  .navbar {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+	/* Style the tabs */
+	.nav {
+		overflow: hidden;
+		width: 100%;
+			position: relative; /* position: fixed to stay visible at all times, position: relative to hide with scroll */
+		/* border-bottom:15px solid white; /* Only if .nav position: fixed */
+		background-color: #041E42; /* Changing this to "inherit" makes it so the color is only around the tabs and doesn't go all the way across the page */
+		height: 60px;
+	}
+
+	/* Style the buttons that are used to open the tab content */
+	.nav button {
+		background-color: #041E42; /* #003087 for blue, #041E42 for dark blue */
+		color: white;
+		font-size: 15px;
+		float: left;
+		width: 7.9%;
+		min-width: 100px;
+    height: 60px;
+		border: none;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		outline: none;
+		cursor: pointer;
+		padding: 10px 12px;
+		transition: 0.2s;
+	}
+
+	/* Change background color of buttons on hover */
+	.nav button:hover:not([disabled]) {
+    background-color: #f9c806;
+    color: #041E42;
+    font-weight: bold;
+  }
+
+	/* Create an active/current "tab button" class */
+	.nav button.active {
+    background-color: white !important;
+    color: #041E42;
+    font-weight: bold;
+  }
+
+	/* Disable hover effects on disabled "tab button" class */
+  .navheaderimage {
+		pointer-events: none;
+		display: none; /* Toggle this to turn this navheader section on/off */
+  }
+
+	.navheadername {
+		pointer-events: none;
+		height: 60px;
+	}
+
+  .navfooter {
+		/* display: none; /* Toggle this to turn this navfooter section on/off */
+ 		pointer-events: none;
+    float: left;
+    background-color: #041E42;
+		position: absolute;
+		right: 0px !important;
+		top: 0px;
+		width: 135px !important;
+		height: 60px;
+    border-radius: 0px !important;
+  }
+
+	/* Style the tab content */
+	.navcontent {
+		display: none;
+		background-color: white;
+		padding: 6px 15px;
+		/* padding-top: 60px; /* Only if .nav position: fixed */
+		border-top: none;
+	}
+</style>
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */

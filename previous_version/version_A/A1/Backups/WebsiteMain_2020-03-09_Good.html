@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<!--Script for identifying Desktop/Mobile versions for making them different later on-->
+	<!--
+	<script type="text/javascript">
+		var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|mobile/i.test(navigator.userAgent);
+		var element = document.getElementById('text');
+		if (isMobile) {
+  		element.innerHTML = "You are using Mobile";
+		} else {
+			element.innerHTML = "You are using Desktop";
+		}
+	</script>
+	-->
+
+<!---Website title in the browser's tab-->
+	<head>
+		<title>Stephen Mann's Website</title>
+		<link rel="shortcut icon" href="C:\Users\smann\Pictures\Untitled.ico" type="image/x-icon"/>
+	</head>
+
+<!--Overall body styling-->
+	<body style="font-family:arial;background-color:#d5d8dc">
+
+	<!--
+	<style>
+		body {
+		background-image: url('C:\\Users\\smann\\Pictures\\Android\\503129_black-grunge-wallpaper.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		}
+	</style>
+	-->
+
+<!--Header and info at the top of the page-->
+		<header>
+			<h2 align="center">Stephen Mann</h2>
+		</header>
+
+<!-- Add icon library -->
+		<link rel="stylesheet" href="C:\Users\smann\GitHub\stephenmann.serveftp.com\fontawesome-free-5.12.1-web\css\all.css">
+
+<!-- Tab links -->
+		<div class="tab">
+	  	<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">
+		  	<a class="active">
+					<i class="fas fa-home" style="margin-right:5px"></i>
+				</a>
+				Home
+			</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Profile')">
+				<a class="active">
+					<i class="fas fa-user-alt" style="margin-right:5px"></i>
+				</a>
+				Profile
+			</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Education')">
+				<a class="active">
+					<i class="fas fa-graduation-cap" style="margin-right:5px"></i>
+				</a>
+				Education
+			</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Career')">
+				<a class="active">
+					<i class="fas fa-briefcase" style="margin-right:5px"></i>
+				</a>
+				Career
+			</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Hobbies')">
+				<a class="active">
+					<i class="fas fa-grin-alt" style="margin-right:5px"></i>
+				</a>
+				Hobbies
+			</button>
+		</div>
+
+<!-- Tab content -->
+		<div id="Home" class="tabcontent">
+			<p>Hello, everyone! My name is Stephen Mann and this is the website I have built. It is almost always a work-in-progress as I'm always thinking of new things to add or change. Please cycle through the tabs above to navigate this website and learn more about me.<br><br>
+			I first started this website while I was unemployed in order to pursue something I've always been interested in learning and to teach myself new coding techniques. I wanted to challenge myself, so I didn't want to utilize any websites - Wordpress, Wix, etc - that did much of the work for me. Development began from scratch in .txt files out of Notepad and then saving-as .html files, and finally opening those files in a browser to check to see if everything was done properly. This proved rather tedious, so I searched for a better way to go about this. Lo and behold, I quickly realized that the text editor program, Atom, would do everything I needed and make things easier with its layout and visualization. Atom is also the program I'm using with my friend to build a Python script for analyzing stock market and bitcoin exchange rates (Also a work-in-progress currently).<br><br>
+			Updates for the future include...<br>
+			<ul>
+				<li>Filling out all of the tabs.</li>
+				<li>Updating to a more modern design with bolder colors, no borders, simplistic approach, etc.</li>
+				<li>Creating a mobile design that handles things differently for smaller displays.</li>
+			</ul>
+			</p>
+		</div>
+
+		<div id="Profile" class="tabcontent">
+	  	<p>Put About Me description here</p>
+			<img src="C:\Users\smann\Pictures\Profile Pic.jpg" height="250">
+		</div>
+
+		<div id="Education" class="tabcontent">
+	  	<p>Put Education description here</p>
+		</div>
+
+		<div id="Career" class="tabcontent">
+	  	<p>If you wish to view my LinkedIn, click here:
+				<a href="http://www.linkedin.com/in/stephenarthurmann" target="_blank">LinkedIn Profile</a>
+			</p>
+		</div>
+
+		<div id="Hobbies" class="tabcontent">
+	  	<p>My biggest hobbies outside of work revolve around automobiles and audio.</p>
+		</div>
+
+<!--Tab button styling-->
+		<style>
+			/* Style the tab */
+			.tab {
+  			overflow: hidden;
+				width: 100%;
+  			/* border: 1px solid #bbb; */
+  			background-color: #041E42; /* Changing this to "inherit" makes it so the color is only around the tabs and doesn't go all the way across the page */
+				/* border-top-left-radius: 10px; */
+				/* border-top-right-radius: 10px; */
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+  			background-color: #041E42; /* #003087 for blue, #041E42 for dark blue */
+				color: white;
+				font-weight: bold;
+				font-size: 16px;
+  			float: left;
+				width: 20%;
+  			border: none;
+				/* border-top-left-radius: 10px; */
+				/* border-top-right-radius: 10px; */
+  			outline: none;
+  			cursor: pointer;
+  			padding: 10px 12px; /* Change to 12px horizontal if not using tabs that span the entire width */
+  			transition: 0.3s;
+			}
+
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+  			background-color: #fce482;
+				color: black;
+			}
+
+			/* Change background color of buttons on selection */
+			/* https://www.w3schools.com/colors/colors_picker.asp */
+			.tab button.active {
+  			background-color: #f9c806; /* #f9c806 for gold */
+				color: black;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+  			display: none;
+				background-color: white;
+  			padding: 6px 12px;
+  			/* border: 1px solid #bbb; */
+  			border-top: none;
+				/* border-bottom-left-radius: 10px; */
+				/* border-bottom-right-radius: 10px; */
+			}
+		</style>
+
+<!--Tab functionality-->
+		<script>
+			function openCity(evt, cityName) {
+	  		// Declare all variables
+	  		var i, tabcontent, tablinks;
+
+	  		// Get all elements with class="tabcontent" and hide them
+	  		tabcontent = document.getElementsByClassName("tabcontent");
+	  		for (i = 0; i < tabcontent.length; i++) {
+	    		tabcontent[i].style.display = "none";
+	  		}
+
+	  		// Get all elements with class="tablinks" and remove the class "active"
+	  		tablinks = document.getElementsByClassName("tablinks");
+	  		for (i = 0; i < tablinks.length; i++) {
+	    		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  		}
+
+	  		// Show the current tab, and add an "active" class to the button that opened the tab
+	  		document.getElementById(cityName).style.display = "block";
+	  		evt.currentTarget.className += " active";
+			}
+		</script>
+
+<!--Open "Home" tab by default (defaultOpen in Tab Links above)-->
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+
+<!--Note regarding IE operations-->
+		<!--
+		<style>
+		.footer {
+	  	left: 0;
+	  	top: 0;
+	  	width: 100%;
+	  	background-color: #595959;
+	  	color: white;
+	  	text-align: left;
+			padding: 2px 0px;
+			margin-top: 0px;
+		}
+		</style>
+
+		<h2 class="footer" style="font-size:14px;font-style:italic">
+		  <p style="margin-left:14px"> *On Internet Explorer, you may need to allow blocked content at the bottom of the page to display the tabs properly.</p>
+		</h2>
+		-->
+
+<!--Dropdown for revision history-->
+	<br>
+
+	<details style="margin-bottom:10px">
+		<summary style="font-weight:bold;outline:none">Latest Compatibility Tests</summary>
+			<ul style="font-size:14px">
+				<li>Google Chrome 80</li>
+				<li>Mozilla Firefox 73</li>
+				<li>Microsoft Edge 44</li>
+				<li>Internet Explorer 11</li>
+			</ul>
+		</summary>
+	</details>
+
+	<details style="margin-bottom:10px">
+		<summary style="font-weight:bold;outline:none">Version 1 Changelog</summary>
+			<ul style="font-size:14px">
+				<li>2020-03-05</li>
+					<ul>
+						<li>Began designing initial website</li>
+					</ul>
+				<li>2020-03-06</li>
+					<ul>
+						<li>Updated with tab-style browsing</li>
+						<li>Filled out color schemes</li>
+					</ul>
+				<li>2020-03-07</li>
+					<ul>
+						<li>Updated to a modern look with the final tab layout</li>
+						<li>Started adding descriptions to each tab</li>
+						<li>Verified compatibility with multiple browsers and Android</li>
+						<li>Added script to check whether viewing on desktop or mobile</li>
+					</ul>
+				</li>
+			</ul>
+		</summary>
+	</details>
+
+		<br>
+
+<!--This is here to test that links work and to hold a place value for the links for later-->
+	<!--
+	<p style="text-align:center">
+		<a href="https://docs.google.com/spreadsheets/d/1vCIAqz21OjMDaHhFNjue-uDv__xqdjoWJIPyc4nFD04/edit?usp=sharing" target="_blank">Chevrolet SS Spreadsheet Test Link</a>
+	</p>
+	-->
+
+</body>
+</html>

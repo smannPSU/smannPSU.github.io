@@ -1,0 +1,151 @@
+
+/* Tab button styling */
+
+<style> /* DO NOT DELETE!!! Navcontent is displayed to the right of the navbar if deleted */
+
+/* Style the overall navigation bar */
+.nav {
+  align-items: stretch;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Style the overall navigation bar */
+.navbar {
+  float: left;
+	position: relative; /* position: fixed to stay visible at all times, position: relative to hide with scroll */
+	overflow: hidden;
+  height: 60px;
+  min-width: 100%;
+  /* border-bottom: 15px solid white; /* Only if .nav position: fixed */
+	background-color: #041e42; /* Changing this to "inherit" makes it so the color is only around the tabs and doesn't go all the way across the page */
+}
+
+/* Style the buttons that are used to open the tab content */
+.navbar button {
+  float: left;
+  display: block;
+  height: 100%;
+	width: 100px;
+  outline: none;
+	border: none;
+  padding: 5px 5px;
+	cursor: pointer;
+  background-color: #041e42;
+	color: white;
+  vertical-align: middle;
+	font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.navbar button:hover:not([disabled]) {
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 13px;
+  background-color: #54657c;
+  color: white;
+  vertical-align: middle;
+}
+
+/* Create an active/current "tab button" class */
+.navbar button.active {
+  transition: 0.2s;
+  height: 59px !important;
+  width: 100px !important;
+  margin-top: 1px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom: 1px solid white !important;
+  background-color: white !important;
+  color: #041e42 !important;
+  font-weight: bold;
+}
+
+.navdivider {
+  display: inline-block;
+  width: 5px !important;
+  padding: 0px 0px !important;
+  pointer-events: none !important;
+}
+
+/* Disable hover effects on disabled "tab button" class */
+.navimage {
+	display: none !important; /* Toggle this to turn this navheader section on/off */
+  pointer-events: none;
+}
+
+/* Style the header name */
+.navname {
+	pointer-events: none;
+	height: 100%;
+  width: 150px !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+#separator {
+  width: 10px !important;
+}
+
+.navlinksvertical {
+  display: none !important;
+}
+
+.navlinkshorizontal {
+  float: right;
+  position: absolute;
+  top: 0px !important;
+  right: 135px !important;
+  pointer-events: none;
+  border-radius: 0px !important;
+  padding-top: 10px;
+  height: 100%;
+  background-color: #041e42;
+  text-align: center;
+}
+
+/* Style the footer */
+.navlogo {
+  float: right;
+  position: absolute;
+  top: 0px;
+	right: 0px !important;
+	/* display: none; /* Toggle this to turn this navfooter section on/off */
+	/* pointer-events: none; /* Toggle this if not needing to link to a test main.html page */
+  height: 60px !important;
+	width: 135px !important;
+  margin-top: 0px !important;
+  border-radius: 0px !important;
+  background-color: #041e42 !important;
+}
+
+@media (max-width: 1000px) {
+  .navlogo {
+    display: none !important;
+  }
+  .navlinkshorizontal {
+    display: none !important;
+  }
+}
+
+/* Style the tab content */
+.navcontent {
+	display: none;
+  float: left;
+  border-top: none;
+  height: calc(100% - 60px);
+	padding: 6px 15px;
+	/* padding-top: 60px; /* Only if .nav position: fixed */
+	background-color: white;
+}
+
+</style> /* DO NOT DELETE!!! Navcontent is displayed to the right of the navbar if deleted */
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */

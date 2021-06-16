@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<!---Website title in the browser's tab-->
+	<head>
+		<title>Stephen Mann's Website</title>
+	</head>
+
+	<body style="background-color:#eee">
+
+<!--Header and info at the top of the page-->
+		<h2 align="center" style="font-family:arial">Stephen Mann</h2>
+
+<!-- Tab links -->
+		<div class="tab" style="font-family:arial">
+	  	<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+	  	<button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Education')">Education</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Career')">Career</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Hobbies')">Hobbies</button>
+		</div>
+
+<!-- Tab content -->
+		<div id="Home" class="tabcontent" style="font-family:arial">
+			<p>Hello, everyone! My name is Stephen Mann and this is the website I have built. It is almost always a work-in-progress as I'm always thinking of new things to add or change. Please cycle through the tabs above to navigate this website and learn more about me.<br><br>
+			I first started this website while I was unemployed in order to learn new coding techniques. I wanted to challenge myself, so I didn't want to utilize any websites – Wordpress, Wix, etc – that did half the work for me. Development began from scratch in .txt files out of Notepad and saving-as .html files, then opening those files in a browser to check to see if everything was done properly. This proved rather tedious, so I searched for a better way to go about this. Lo and behold, I quickly realized that the text editor program, Atom, would do everything I needed to do and make it easier with its layout and visualization. Atom was also the program I was using with my friend to help build a Python script for analyzing stock market and bitcoin exchange rates (Also still a work-in-progress currently).<br><br>
+			Updates for the future include...<br>
+			<ul>
+				<li>Filling out all of the tabs.</li>
+				<li>Incorporating IE design work, since it handles things differently.</li>
+				<li>Testing on Android and iOS mobile devices</li>
+				<li>Updating to a more modern look with bolder colors, no borders, etc.</li>
+			</ul>
+			</p>
+		</div>
+
+		<div id="About Me" class="tabcontent" style="font-family:arial">
+	  	<p>Put About Me description here</p>
+		</div>
+
+		<div id="Education" class="tabcontent" style="font-family:arial">
+	  	<p>Put Education description here</p>
+		</div>
+
+		<div id="Career" class="tabcontent" style="font-family:arial">
+	  	<p>Put Career description here</p>
+		</div>
+
+		<div id="Hobbies" class="tabcontent" style="font-family:arial">
+	  	<p>Put Hobbies description here</p>
+		</div>
+
+<!--Tab button styling-->
+		<style>
+			/* Style the tab */
+			.tab {
+  			overflow: hidden;
+  			border: 1px solid #bbb;
+  			background-color: #5b7f9f;
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+  			background-color: inherit;
+				color: white;
+				font-weight: bold;
+				font-size: 16px;
+  			float: left;
+  			border: none;
+  			outline: none;
+  			cursor: pointer;
+  			padding: 14px 16px;
+  			transition: 0.3s;
+			}
+
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+  			background-color: #9fbbd7;
+			}
+
+			/* Create an active/current tablink class */
+			.tab button.active {
+  			background-color: #49657d;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+  			display: none;
+				background-color: #ffff;
+  			padding: 6px 12px;
+  			border: 1px solid #bbb;
+  			border-top: none;
+			}
+		</style>
+
+<!--Tab functionality-->
+		<script>
+			function openCity(evt, cityName) {
+	  		// Declare all variables
+	  		var i, tabcontent, tablinks;
+
+	  		// Get all elements with class="tabcontent" and hide them
+	  		tabcontent = document.getElementsByClassName("tabcontent");
+	  		for (i = 0; i < tabcontent.length; i++) {
+	    		tabcontent[i].style.display = "none";
+	  		}
+
+	  		// Get all elements with class="tablinks" and remove the class "active"
+	  		tablinks = document.getElementsByClassName("tablinks");
+	  		for (i = 0; i < tablinks.length; i++) {
+	    		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  		}
+
+	  		// Show the current tab, and add an "active" class to the button that opened the tab
+	  		document.getElementById(cityName).style.display = "block";
+	  		evt.currentTarget.className += " active";
+			}
+		</script>
+
+<!--Open "Home" tab by default-->
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+
+<!--Note regarding IE operations-->
+		<p style="font-family:arial;font-size:14px;color:#cc0000">*NOTE: On some browsers, you may need to allow blocked content to display the tabs properly. This is at the bottom of the page on Internet Explorer (the worst culprit) to enable the tab browsing above.</p>
+
+<!--Dropdown revision history-->
+	<details>
+		<summary style="font-family:arial">Revision History</summary>
+		<p style="font-family:arial;font-size:15px;font-weight:bold;text-decoration:underline">
+			Version 1<br>
+		</p>
+		<p style="font-family:arial;font-size:14px">
+			2020-03-05 ... Created initial website.<br>
+			2020-03-06 ... Updated with tab browsing.<br>
+		</p>
+	</details>
+
+		<br>
+
+<!--This is here to test that links work and to hold a place value for the links for later-->
+	<a href="https://docs.google.com/spreadsheets/d/1vCIAqz21OjMDaHhFNjue-uDv__xqdjoWJIPyc4nFD04/edit?usp=sharing" target="_blank" style="font-family:arial;text-align:center;display:block">Chevrolet SS Spreadsheet Test Link</a>
+
+	<a href="http://www.linkedin.com/in/stephenarthurmann" target="_blank" style="font-family:arial;text-align:center;display:block">LinkedIn Profile</a>
+
+</body>
+</html>

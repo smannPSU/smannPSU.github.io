@@ -1,0 +1,124 @@
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+}
+
+figcaption {
+  margin-top:5px;
+  text-align: center;
+  font-style: italic !important;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding-bottom: 4px;
+  margin-right: 5px;
+  background-color: #041e42 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  align: center;
+}
+
+@media (max-width: 1100px) {
+  #homeStyling {
+    display: inherit !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+  }
+  .homeText {
+    position: inherit !important;
+    float: inherit !important;
+    background-color: inherit !important;
+    border-radius: none !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1.0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+  }
+  #welcomePic {
+    float: inherit !important;
+    display: inherit !important;
+    border-radius: 0px !important;
+    vertical-align: inherit !important;
+  }
+}
+
+@media (max-width: 1350px) {
+  .profilePic {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tableDisappear {
+    display: none !important;
+  }
+  .tableAppear {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  .ATPdisappear {
+    display: none !important;
+  }
+  .ATPappear {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  #showbrowser {
+    display: inline-block !important;
+    height: 15px !important;
+    width: 12px !important;
+    padding: 0;
+    margin: 0;
+  }
+  #desktopbrowsers {
+    display: none !important;
+  }
+  #mobilebrowsers {
+    display: none !important;
+  }
+  #lasttested {
+    display: none !important;
+  }
+  .browsercontent {
+    min-width: 582px !important;
+  }
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume {
+  width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #aaaaaa;
+  box-shadow: 5px 5px 5px black;
+  background-color: #f2f2f2;
+  padding: 25px 45px;
+  font-size: 14px;
+}

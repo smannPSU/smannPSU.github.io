@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<!---Website title in the browser's tab-->
+	<head>
+		<title>Stephen Mann's Website</title>
+	</head>
+
+	<body style="background-color:#fff">
+
+<!--Header and info at the top of the page-->
+		<h2 align="center" style="font-family:arial;margin-bottom:7px">Stephen Mann</h2>
+
+		<a href="http://www.linkedin.com/in/stephenarthurmann" target="_blank" style="font-family:arial;text-align:center;display:block;margin-bottom:16px">LinkedIn Profile</a>
+			<hr>
+
+<!-- Tab links -->
+		<div class="tab" style="font-family:arial">
+	  	<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen">Home</button>
+	  	<button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Education')">Education</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Professional Career')">Professional Career</button>
+	  	<button class="tablinks" onclick="openCity(event, 'Hobbies and Passions')">Hobbies and Passions</button>
+		</div>
+
+<!-- Tab content -->
+		<div id="Home" class="tabcontent" style="font-family:arial">
+			<h3>Home</h3>
+			<p>Put Home description here</p>
+		</div>
+
+		<div id="About Me" class="tabcontent" style="font-family:arial">
+	  	<h3>About Me</h3>
+	  	<p>Put About Me description here</p>
+		</div>
+
+		<div id="Education" class="tabcontent" style="font-family:arial">
+	  	<h3>Education</h3>
+	  	<p>Put Education description here</p>
+		</div>
+
+		<div id="Professional Career" class="tabcontent" style="font-family:arial">
+	  	<h3>Professional Career</h3>
+	  	<p>Put Professional Career description here</p>
+		</div>
+
+		<div id="Hobbies and Passions" class="tabcontent" style="font-family:arial">
+	  	<h3>Hobbies and Passions</h3>
+	  	<p>Put Hobbies and Passions description here</p>
+		</div>
+
+<!--Tab button styling-->
+		<style>
+			/* Style the tab */
+			.tab {
+  			overflow: hidden;
+  			border: 1px solid #ccc;
+  			background-color: #eee;
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+  			background-color: inherit;
+				font-weight: bold;
+				font-size: 16px;
+  			float: left;
+  			border: none;
+  			outline: none;
+  			cursor: pointer;
+  			padding: 14px 16px;
+  			transition: 0.3s;
+			}
+
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+  			background-color: #ddd;
+			}
+
+			/* Create an active/current tablink class */
+			.tab button.active {
+  			background-color: #ccc;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+  			display: none;
+				background-color: #fff;
+  			padding: 6px 12px;
+  			border: 1px solid #ccc;
+  			border-top: none;
+			}
+		</style>
+
+<!--Tab functionality-->
+		<script>
+			function openCity(evt, cityName) {
+	  		// Declare all variables
+	  		var i, tabcontent, tablinks;
+
+	  		// Get all elements with class="tabcontent" and hide them
+	  		tabcontent = document.getElementsByClassName("tabcontent");
+	  		for (i = 0; i < tabcontent.length; i++) {
+	    		tabcontent[i].style.display = "none";
+	  		}
+
+	  		// Get all elements with class="tablinks" and remove the class "active"
+	  		tablinks = document.getElementsByClassName("tablinks");
+	  		for (i = 0; i < tablinks.length; i++) {
+	    		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  		}
+
+	  		// Show the current tab, and add an "active" class to the button that opened the tab
+	  		document.getElementById(cityName).style.display = "block";
+	  		evt.currentTarget.className += " active";
+			}
+		</script>
+
+<!--Open "Home" tab by default-->
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+
+<!--Note regarding IE operations-->
+		<p style="font-family:arial;font-size:14px;font-style:italic;color:#cc0000">*NOTE: On Internet Explorer, you may need to allow blocked content at the bottom of the page to enable tab browsing.</p>
+
+		<hr>
+
+
+
+<!--***MAYBE DELETE LATER*** Old links for tab sections-->
+	<p style="font-family:arial">
+	<p1>I am in the process of creating a website that will be hosted on my friend's server. The purpose of this website was to learn how to build an online version of me while also learning how to code in the process.</p1>
+		<br><br>
+	<a href="WEBSITE ADDRESS">About Me</a>
+		<br><br>
+	<a href="WEBSITE ADDRESS">Career Goals and Resume</a>
+		<br><br>
+	<a href="WEBSITE ADDRESS">Hobbies and Passions</a>
+		<br><br>
+	<p1>This concludes the area used for my website for now. I will be updating all of this as soon as possible.</p1>
+	</p>
+
+
+
+		<hr>
+
+<!--Dropdown revision history-->
+	<details>
+		<summary style="font-family:arial">Revision History</summary>
+		<p style="font-family:arial">
+			2020-03-05 ... Created initial website.<br>
+			2020-03-06 ... Updated with tab browsing.<br>
+		</p>
+	</details>
+
+		<br>
+
+<!--This is here to test that links work and to hold a place value for the link for later-->
+	<a href="https://docs.google.com/spreadsheets/d/1vCIAqz21OjMDaHhFNjue-uDv__xqdjoWJIPyc4nFD04/edit?usp=sharing" target="_blank" style="font-family:arial">Chevrolet SS Spreadsheet Test Link</a>
+
+</body>
+</html>

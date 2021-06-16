@@ -1,0 +1,208 @@
+/* Tab button styling */
+<style>
+
+	/* Style the overall navigation bar */
+  .nav {
+    align-items: stretch;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    display: inline-flex;
+  }
+
+	/* Style the overall navigation bar */
+	.navbar {
+    display: inline-flex;
+    overflow: hidden;
+    background-color: inherit;
+    width: 100%;
+   }
+
+	/* Style the buttons that are used to open the tab content */
+	.navbar button {
+    display: block;
+    background-color: #041e42;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+    width: 10%;
+    min-width: 100px;
+    padding: 7px 15px;
+    transition: 0.2s;
+    border: 1px solid white;
+    border-bottom: 2px solid white;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    font-size: 16px;
+    text-align: center;
+	}
+
+	/* Change background color of buttons on hover */
+	.navbar button:hover:not([disabled]) {
+    background-color: #54657c;
+    color: white;
+  }
+
+	/* Create an active/current "tab button" class */
+	.navbar button.active {
+    top: 1px;
+    position: relative;
+    background-color: white !important;
+    color: #041e42 !important;
+    border: 1px solid #041e42;
+    border-bottom: 1px solid white;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    margin-left: 1px;
+    margin-right: 1px;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+	/* Disable hover effects on disabled "tab button" class */
+  .navimage {
+		display: none !important; /* Toggle this to turn this navheader section on/off */
+    pointer-events: none;
+  }
+
+  /* Style the header name */
+	.navname {
+		pointer-events: none;
+    width: 10% !important;
+    min-width: 150px !important;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid white;
+    border-bottom: 2px solid white;
+    background-color: #bfbfbf !important;
+    color: black !important;
+    margin-left: 3px;
+	}
+
+  .navgap {
+    pointer-events: none;
+    background-color: #bfbfbf !important;
+    border-radius: 15px;
+    width: 27% !important;
+    min-width: 50px !important;
+  }
+
+  .navlinkshorizontal {
+    display: none !important;
+  }
+
+  .navlinksvertical {
+    float: right;
+		pointer-events: none;
+    width: 3% !important;
+    min-width: 50px !important;
+    border-radius: 15px;
+    border: 1px solid white;
+    border-bottom: 2px solid white;
+    background-color: #041e42 !important;
+	}
+
+  /* Style the footer */
+  .navlogo {
+		/* display: none; /* Toggle this to turn this navfooter section on/off */
+    display: block;
+    background-color: #bfbfbf !important;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+    width: 10% !important;
+    min-width: 140px !important;
+    padding: 7px 15px;
+    border: 1px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 15px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-right: 3px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+	/* Style the tab content */
+	.navcontent {
+    display: none;
+    min-width: 840px;
+    padding: 1px 16px;
+    background-color: white;
+    border: 1px solid #041e42;
+    border-radius: 15px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: -1px;
+	}
+
+
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */
+
+
+
+   /* Apply browser styling on Notes tab */
+    /* Style the tab */
+    .browserbar {
+      display: inline-flex;
+      overflow: hidden;
+      background-color: inherit;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .browserbar button {
+      background-color: #041e42;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      min-width: 70px;
+      padding: 7px 15px;
+      transition: 0.2s;
+      font-size: 25px;
+      border: 1px solid white;
+      border-bottom: 2px solid white;
+      border-radius: 12px;
+      margin-bottom: 1px;
+      text-align: center;
+    }
+
+    /* Change background color of buttons on hover */
+    .browserbar button:hover:not([disabled]) {
+      background-color: #54657c;
+      color: white;
+    }
+
+    /* Create an active/current tablink class */
+    .browserbar button.active {
+      background-color: white !important;
+      color: #041e42 !important;
+      border: 1px solid #041e42;
+      border-bottom: 2px solid white;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      margin-left: 1px;
+      margin-right: 1px;
+      margin-bottom: -1px;
+    }
+
+    /* Style the tab content */
+    .browsercontent {
+      display: none;
+      min-width: 1067px;
+      padding: 1px 16px;
+      border: 1px solid #041e42;
+      border-radius: 15px;
+      margin-top: -1px;
+    }
+   </style>

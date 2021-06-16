@@ -1,0 +1,65 @@
+
+/* Apply browser styling on Notes tab */
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.browserbar {
+  display: inline-flex;
+  overflow: hidden;
+  height: 55px;
+  background-color: inherit;
+}
+
+/* Style the buttons that are used to open the tab content */
+.browserbar button {
+  background-color: #041e42;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 60px;
+  padding: 10px 15px;
+  transition: 0.2s;
+  font-size: 25px;
+  border: 1px solid white;
+  border-radius: 12px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.browserbar button:hover:not([disabled]) {
+  background-color: #54657c !important;
+  color: white;
+}
+
+/* Create an active/current tablink class */
+#browserbar button.active {
+  background-color: white !important;
+  color: #041e42 !important;
+  border: 1px solid #041e42;
+  border-bottom: 2px solid white;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-bottom: -1px;
+}
+
+.browserlinks img {
+  height: 27px !important;
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+/* Style the tab content */
+.browsercontent {
+  display: none;
+  min-width: 1067px;
+  padding: 1px 16px;
+  border: 1px solid #041e42;
+  border-radius: 12px;
+  margin-top: -1px;
+}

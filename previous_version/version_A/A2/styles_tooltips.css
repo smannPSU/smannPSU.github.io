@@ -1,0 +1,38 @@
+
+/* Styling for tooltip on Notes tab */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 600px;
+  background-color: #404040;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+	border: 1px solid black;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 100%;
+	margin-left: 10px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.95;
+}

@@ -1,0 +1,103 @@
+
+/* Tab button styling */
+<style>
+
+  * {box-sizing: border-box}
+
+  /* Style the overall navigation bar */
+  .navbar {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  /* Style the tabs */
+  .nav {
+    float: left;
+    position: relative; /* position: fixed to stay visible at all times, position: relative to hide with scroll */
+    /* border-right:15px solid white; /* Only if .nav position: fixed */
+    background-color: #041E42;
+    width: 150px;
+    min-width: 150px; /* DO NOT DELETE!!! This is needed or else the navigation bar becomes narrower on IE11. */
+    min-height: 100vh;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .nav button {
+    display: block;
+    background-color: #041E42;
+    font-size: 15px;
+    color: white;
+    padding: 12px 12px;
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  /* Change background color of buttons on hover */
+  .nav button:hover:not([disabled]) {
+    background-color: #f9c806;
+    color: #041E42;
+    font-weight: bold;
+  }
+
+  /* Create an active/current "tab button" class */
+  .nav button.active {
+    background-color: white !important;
+    color: #041E42;
+    font-weight: bold;
+  }
+
+  /* Disable hover effects on disabled "tab button" class */
+  .navheaderimage {
+    display: none !important; /* Toggle this to turn this navheader section on/off */
+    pointer-events: none;
+    text-align: center;
+    padding: 14px 14px !important;
+    height: 175px !important;
+  }
+
+  .navheadername {
+    pointer-events: none;
+    text-align: center;
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px 14px;
+  }
+
+  .navfooter {
+    pointer-events: none;
+    float: left;
+    background-color: #041E42;
+    text-align: center;
+    height: 60px !important;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  /* Style the tab content */
+  .navcontent {
+    float: left;
+    background-color: white;
+    padding: 0px 20px;
+    /* padding-left: 170px; /* Only if .nav position: fixed */
+    width: 100%;
+    min-height: 100vh;
+  }
+
+</style>
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */

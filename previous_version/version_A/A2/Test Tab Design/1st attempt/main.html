@@ -1,0 +1,765 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" style="min-height:100%">
+	<meta charset="utf-8">
+
+<!-- Script for identifying Desktop/Mobile versions for making them different later on -->
+	<!--
+	<script type="text/javascript">
+		var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini|mobile/i.test(navigator.userAgent);
+		var element = document.getElementById('text');
+		if (isMobile) {
+  		element.innerHTML = "You are using Mobile";
+		} else {
+			element.innerHTML = "You are using Desktop";
+		}
+	</script>
+	-->
+
+<!-- Load relevent files -->
+	<head>
+		<!-- Website title in browser's tab -->
+		<title>Stephen Mann's Website</title>
+		<!-- Icon in browser's tab -->
+		<link rel="shortcut icon" href="./icons_and_images/icon_browser_tab_19.ico" type="image/x-icon"/>
+		<style>
+			html {visibility:hidden}
+		</style>
+		<!-- Load icons for using throughout the webpage -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FortAwesome/Font-Awesome/master/css/all.css" media="screen"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- Load styles for tab layouts -->
+		<link rel="stylesheet" type="text/css" href="./styles_tabs_horizontal.css" title="Horizontal Tabs" media="screen"/>
+		<link rel="alternate stylesheet" type="text/css" href="./styles_tabs_vertical.css" title="Vertical Tabs" media="screen"/>
+		<!-- Javascript function for changing stylesheets -->
+		<script src="./tab_layout_swapper.js"></script>
+	</head>
+
+<!-- Overall body styling -->
+	<body style="min-height:100vh;margin:0;padding:0;background-color:#bfbfbf;font-family:arial">
+
+	<!--
+	<style>
+		body {
+		background-image: url('C:\\Users\\smann\\Pictures\\Android\\503129_black-grunge-wallpaper.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		}
+	</style>
+	-->
+
+<!-- Tab links -->
+		<div class="nav">
+			<div class="navbar">
+				<button class="navimage" disabled>
+					<img src="./icons_and_images/profile_pic_cropped.jpg" alt="[Profile]" width="150" style="margin-bottom:10px">
+				</button>
+				<button class="navname" style="font-size:17px" disabled>
+					Stephen Mann
+				</button>
+	  		<button class="navtabs" onclick="openTab(event, 'Home')" id="defaultOpen" style="border-top-left-radius:15px">
+					<i class="fas fa-home" style="margin-bottom:5px"></i><br>
+					Home
+				</button>
+	  		<button class="navtabs" onclick="openTab(event, 'Profile')">
+					<i class="fas fa-user-alt" style="margin-bottom:5px"></i><br>
+					Profile
+				</button>
+	  		<button class="navtabs" onclick="openTab(event, 'Career')">
+					<i class="fas fa-briefcase" style="margin-bottom:5px"></i><br>
+					Career
+				</button>
+	  		<button class="navtabs" onclick="openTab(event, 'Hobbies')">
+					<i class="fas fa-grin-alt" style="margin-bottom:5px"></i><br>
+					Hobbies
+				</button>
+				<button class="navtabs" onclick="openTab(event, 'Notes')" style="border-top-right-radius:15px">
+					<i class="fas fa-file-alt" style="margin-bottom:5px"></i><br>
+					Notes
+				</button>
+				<section class="navlinkshorizontal" align="right" style="padding-top:10px">
+						<a href="http://www.linkedin.com/in/stephenarthurmann" target="_blank" style="color:black"><i class="fab fa-linkedin"></i></a><br>
+						<a href="mailto:smann.psu@gmail.com" target="_blank" style="color:black"><i class="fas fa-envelope" style="margin-top:6px"></i></a>
+				</section>
+				<button class="navlogo" disabled>
+					<img src="./icons_and_images/smann_logo_7_black.png" alt="[smann]" width="100">
+				</button>
+			</div>
+
+<!-- Home tab content -->
+			<div id="Home" class="navcontent">
+				<p>
+					Hello, everyone! My name is Stephen Mann and this is the website I have built from scratch. It is almost always a work-in-progress as I'm always thinking of new things to add or change. Feel free to cycle through the tabs to navigate this website and learn more about me.
+				</p>
+				<p>
+					I first started this website while I was unemployed in order to pursue something I've always been interested in learning and to teach myself new coding techniques. I wanted to challenge myself, so I didn't want to utilize any websites - Wordpress, Wix, etc - that would end up doing most of the work for me.	Development began in a .txt file out of Notepad, then saving-as an .html file and opening that file in a browser to check to see if everything was done properly. This proved rather tedious as you can imagine, so I quickly swapped over to utilizing the text editor program, Atom. It did everything I needed and made things easier with its layout and overall visualization of the different parts of the code.
+					<!--
+					Atom is also the program I'm using with my friend to build a Python script for analyzing stock market and bitcoin exchange rates (Also a work-in-progress currently).
+					-->
+				</p>
+				<p>If you notice any issues or if you have any advice on how to improve the coding that went into this, please let me know by contacting the email on my Profile tab or by clicking on the email icon in the navigation bar.
+				</p>
+
+				<hr>
+
+				<p>
+					There may be some test features from time to time that will most likely reside on this tab until they are fully implemented, such as the tab layout configuration buttons below.
+				</p>
+				<p>
+					<form method="GET" action="#" onclick="setActiveStyleSheet('Vertical Tabs'); return false;" style="display:inline-block;;padding-left:15px">
+						<input type="submit" value="Vertical Tabs" style="cursor:pointer;width:130px;background-color:#041E42;color:white;margin-right:-1px;padding:10px 0px;outline:none;border:none;border-top-left-radius:12px;border-bottom-left-radius:12px">
+					</form>
+					<form method="GET" action="#" onclick="setActiveStyleSheet('Horizontal Tabs'); return false;" style="display:inline-block;padding-right:15px">
+						<input type="submit" value="Horizontal Tabs" style="cursor:pointer;width:130px;background-color:#041E42;color:white;margin-left:-1px;padding:10px 0px;outline:none;border:none;border-top-right-radius:12px;border-bottom-right-radius:12px">
+					</form>
+					---&emsp;(Still a WIP; need to integrate into a single dropdown menu/single button in the navigation bar)
+				</p>
+
+				<hr>
+
+				<p>
+					Updates in the future...
+					<ul>
+						<li>Force reload of the same tab when refreshing page</li>
+						<li>Redesign some tabs for better content visualization</li>
+						<li>Fully integrate tab layout configuration buttons</li>
+						<li>Make email icon "copy to clipboard" rather than try to open in an email app</li>
+						<li>Create horizontal fade-outs for Profile tab with hover details for more info of each part</li>
+						<li>Create a mobile design that handles things differently for smaller displays</li>
+						<li>Fix horizontal tab logo not being all the way right when horizontal scrolling</li>
+						<li>Fix horizontal tab logo going over all other tabs when scrolling</li>
+						<li>Fix vertical tab logo going over Notes tab before disappearing</li>
+						<li>Maybe use multiple HTML pages instead of doing everything in the Main page:
+							<a href="test.html">Test HTML Link</a>
+						</li>
+					</ul>
+				</p>
+			</div>
+
+<!-- Profile tab content -->
+			<div id="Profile" class="navcontent">
+				<!--
+				<p style="background-color:#ffcc00;width:200px;text-align:center">
+					<b><i>Work In Progress...</i></b>
+				</p>
+				-->
+				<table align="center" style="border-collapse:collapse;margin-top:20px">
+					<tr style="background-color:#041E42;color:white">
+						<td style="height:50px;width:60px;min-width:60px;text-align:center"><i class="fas fa-address-card" style="font-size:25px"></i></td>
+						<td style="height:50px;width:425px;min-width:425px">About Me</td>
+						<td rowspan="11" style="vertical-align:top;background-color:white;padding:0px 0px">
+							<img src="./icons_and_images/profile_pic.jpg" alt="[Profile]" height="572" style="vertical-align:top">
+						</td>
+						<td style="height:50px;width:425px;min-width:425px;text-align:right">Main Skills</td>
+						<td style="height:50px;width:60px;min-width:60px;text-align:center"><i class="fas fa-star" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#bfbfbf">
+						<td style="height:50px;text-align:center"><i class="fas fa-file-signature" style="font-size:25px"></i></td>
+						<td style="height:50px">Stephen Mann</td>
+						<td style="height:50px;text-align:right">Technical writing</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-file-alt" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#d9d9d9">
+						<td style="height:50px;text-align:center"><i class="fas fa-university" style="font-size:25px"></i></td>
+						<td style="height:50px">Penn State University, University Park</td>
+						<td style="height:50px;text-align:right">Computer-aided design (CAD)</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-laptop" style="font-size:25px"></i></td>
+					</tr>
+
+					<tr style="background-color:#bfbfbf">
+						<td style="height:50px;text-align:center"><i class="fas fa-calendar-alt" style="font-size:25px"></i></td>
+						<td style="height:50px">Class of 2012</td>
+						<td style="height:50px;text-align:right">Coding</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-code" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#d9d9d9">
+						<td style="height:50px;text-align:center"><i class="fas fa-atom" style="font-size:25px"></i></td>
+						<td style="height:50px">Bachelor of Science in Nuclear Engineering</td>
+						<td style="height:50px;text-align:right">Nuclear / Mechanical / Petroleum / Software Engineering</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-drafting-compass" style="font-size:25px"></i></td>
+					</tr>
+
+					<tr style="background-color:#bfbfbf">
+						<td style="height:50px;text-align:center"><i class="fas fa-tools" style="font-size:25px"></i></td>
+						<td style="height:50px">Minor in Engineering Mechanics</td>
+						<td style="height:50px;text-align:right">Microsoft Windows and Office products</td>
+						<td style="height:50px;text-align:center"><i class="fab fa-microsoft" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#d9d9d9">
+						<td style="height:50px;text-align:center"><i class="fas fa-map-marker-alt" style="font-size:25px"></i></td>
+						<td style="height:50px">Based in Pittsburgh, PA</td>
+						<td style="height:50px;text-align:right">Critical thinking and problem solving</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-lightbulb" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#bfbfbf">
+						<td style="height:50px;text-align:center"><i class="fas fa-car" style="font-size:25px"></i></td>
+						<td style="height:50px">Willing to travel for work</td>
+						<td style="height:50px;text-align:right">Excellent communication</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-comment" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#d9d9d9">
+						<td style="height:50px;text-align:center"><i class="fas fa-phone-alt" style="font-size:25px"></i></td>
+						<td style="height:50px">+1 (703) 774-7834</td>
+						<td style="height:50px;text-align:right">Continuous improvement</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-infinity" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#bfbfbf">
+						<td style="height:50px;text-align:center"><i class="fas fa-envelope" style="font-size:25px"></i></td>
+						<td style="height:50px">smann.psu@gmail.com&emsp;<i style="font-size:14px">(Preferred contact method)</i></td>
+
+						<td style="height:50px;text-align:right">Leader / Mentor / Team member / Independent worker</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-user-friends" style="font-size:25px"></i></td>
+					</tr>
+					<tr style="background-color:#d9d9d9">
+						<td style="height:50px;text-align:center"><i class="fab fa-linkedin" style="font-size:25px"></i></td>
+						<td style="height:50px">http://www.linkedin.com/in/stephenarthurmann</td>
+						<td style="height:50px;text-align:right">Open to new things and adaptable to new industries</td>
+						<td style="height:50px;text-align:center"><i class="fas fa-door-open" style="font-size:25px"></i></td>
+					</tr>
+				</table>
+				<p style=";text-align:center;font-style:italic">
+					*Check out my Career tab to see a detailed version of my resume for more specific skills
+				</p>
+
+				<!--
+				<p>
+					Continuous improvement (maybe infinity symbol)<br>
+					Motivated<br>
+					Researching and analyzing (search icon)<br>
+					Time management (hourglass)<br>
+					QA and troubleshooting
+				</p>
+				-->
+
+			</div>
+
+<!-- Career tab content -->
+			<div id="Career" class="navcontent">
+				<table width="100%" style="border-collapse:collapse;min-width:1400px" align="center">
+					<tr>
+						<td style="vertical-align:top;padding-right:20px">
+							<p align="center" style="font-size:18px;font-weight:bold">Engineer with 7+ Years of Professional Experience</p>
+
+							<hr>
+
+							<p style="font-size:16px;font-weight:bold;text-align:center">
+								Halliburton Energy Services<br>
+								Field Engineer<br><br>
+							</p>
+							<table width="100%" style="border-collapse:collapse;table-layout:fixed">
+								<tr>
+									<td width="50%" align="right" style="border-right:1px solid black;padding-right:10px">Technical Professional</td>
+									<td width="50%" style="padding-left:10px">August 1, 2016 - May 29, 2019</td>
+								</tr>
+								<tr>
+									<td width="50%" align="right" style="border-right:1px solid black;padding-right:10px">Associate Technical Professional</td>
+									<td width="50%" style="padding-left:10px">June 24, 2014 - July 31, 2016</td>
+								</tr>
+							</table>
+
+							<br>
+							<hr>
+
+							<p style="font-size:16px;font-weight:bold;text-align:center">
+								Murtech, Inc.<br>
+								Engineer<br><br>
+							</p>
+							<table width="100%" style="border-collapse:collapse;table-layout:fixed">
+								<tr>
+									<td width="50%" align="right" style="border-right:1px solid black;padding-right:10px">Engineer</td>
+									<td width="50%" style="padding-left:10px">May 24, 2012 - June 5, 2014</td>
+								</tr>
+								<tr>
+									<td width="50%" align="right" style="border-right:1px solid black;padding-right:10px">Engineering Internship</td>
+									<td width="50%" style="padding-left:10px">June 18, 2008 - May 23, 2012</td>
+								</tr>
+							</table>
+							<br>
+							<p style="font-size:15px;text-align:center"><i>*The internship spanned every summer and winter break of college, including the summer before attending.</i></p>
+
+							<hr>
+
+							<p style="font-size:18px;font-weight:bold;text-align:center;margin-bottom:25px">
+								Professional References
+							</p>
+							<p style="text-align:center;margin-bottom:25px">
+								<b>Adam Shanks</b><br>
+								Lead Technical Professional<br>
+								Halliburton Energy Services, Inc.<br>
+								4999 East Pointe Dr.<br>
+								Zanesville, OH 43701<br>
+								Cell Phone: +1 (724) 549-2617<br>
+								Email: adam.shanks@halliburton.com<br>
+							</p>
+							<p style="text-align:center;margin-bottom:25px">
+								<b>Matthew Cunkelman</b><br>
+								Autonomy Systems Engineer<br>
+								Uber Advanced Technologies Group (ATG)<br>
+								3011 Smallman St.<br>
+								Pittsburgh, PA 15201<br>
+								Cell Phone: +1 (724) 549-2382<br>
+								Email: cunkelman.matthew@gmail.com<br>
+							</p>
+							<p style="text-align:center;margin-bottom:25px">
+								<b>Robert Murtha</b><br>
+								President and Principal Engineer<br>
+								Murtech, Inc.<br>
+								820 Cromwell Park Dr.<br>
+								Glen Burnie, MD 21061<br>
+								Work Phone: +1 (410) 766-5335 x1001<br>
+								Email: bmurtha@murtech.us<br>
+							</p>
+							<p style="text-align:center;margin-bottom:25px">
+								<b>Timothy Rash</b><br>
+								Drilling Engineer II<br>
+								EQT Production Company<br>
+								625 Liberty Avenue<br>
+								Pittsburg, PA 15222<br>
+								Cell Phone: +1 (412) 297-1772<br>
+								Email: trash@eqt.com<br>
+							</p>
+							<p style="text-align:center;font-size:15px;font-style:italic">
+								*I have more professional references available on request
+							</p>
+						</td>
+						<td width="805">
+							<p align="center" style="font-size:18px;font-weight:bold">My Resume</p>
+							<iframe src="./stephen_mann_resume.pdf" height="1076" width="790"></iframe>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+<!-- Hobbies tab content -->
+			<div id="Hobbies" class="navcontent">
+	  		<p>
+					My biggest hobbies outside of work revolve around automobiles and audio systems. Navigate the sections below for more info...
+				</p>
+
+				<details style="min-width:800px;margin-bottom:10px;background-color:#cccccc;padding:10px 10px;border-radius:10px">
+					<summary style="font-weight:bold;outline:none">My 2015 Chevy SS LSA Install</summary>
+						<div style="margin-top:-5px;padding-bottom:1px;border-radius:5px;background-color:white">
+							<p style="padding-left:15px;padding-right:15px;padding-top:15px">
+								My build is as follows...
+								<ul style="margin-left:15px;margin-right:15px">
+									<li>1.9L LSA Supercharger</li>
+									<li>ARH 2" LT headers with cats to stock mufflers</li>
+									<li>Roto-Fab CAI</li>
+									<li>Custom Heat Exchanger specifically made for the SS (The first one designed by STG Motorsports)</li>
+									<li>LS7 MAF</li>
+									<li>Elite Engineering E2 Catch Can</li>
+									<li>91 octane tune (Would have done 93, but there are a few places I've stopped where 91 is the highest available option)</li>
+								</ul>
+							</p>
+							<p style="padding-left:15px;padding-right:15px">
+								Results...<br><br>
+								<b>480hp/484lb-ft</b> at the rear wheels! 8.5psi of boost with 10-11 degrees of timing. IATs saw a 56° increase on a 45-135 mph pull.<br><br>
+								I wasn't chasing numbers, the goal was more reliable power without affecting driveability. The engine was also not iced down or anything before the dyno run, so this is what I will be seeing in everyday driving. Just driven over, strapped down, and dyno run performed.<br><br>
+								Installed by STG Motorsports<br>
+								Tuned by Tuning by Shane Hinds
+							</p>
+							<p style="text-align:center;font-weight:bold">
+								DynoJet Results<br>
+								<img src="./icons_and_images/ss_lsa_dyno.png" alt="[LSA Dyno Results]" height="400">
+								<p style="text-align:center;font-size:15px;font-style:italic">
+									*Fun fact: Horsepower = Torque × RPM ÷ 5,252 (This is why dyno charts always cross at 5,252 rpm when the lines are on the same scale)
+								</p>
+								<br>
+								<p style="text-align:center">
+									<img src="./icons_and_images/ss_lsa_install_pic.jpg" alt="[LSA Install]" height="400">
+								</p>
+							</p>
+						</div>
+				</details>
+
+				<details style="min-width:800px;margin-bottom:10px;background-color:#cccccc;padding:10px 10px;border-radius:10px">
+					<summary style="font-weight:bold;outline:none">2014-2017 Chevrolet SS Sedan Spreadsheet</summary>
+						<div style="margin-top:-5px;padding-bottom:1px;border-radius:5px;background-color:white">
+							<p style="padding-left:15px;padding-right:15px;padding-top:15px">
+								<a href="https://docs.google.com/spreadsheets/d/1vCIAqz21OjMDaHhFNjue-uDv__xqdjoWJIPyc4nFD04/edit?usp=sharing" target="_blank">Chevrolet SS Sedan (1EK69) Information Spreadsheet</a>
+							</p>
+							<p style="padding-left:15px;padding-right:15px">
+								I built and currently maintain the 2014-2017 Chevrolet SS Sedan spreadsheet on the SSforums. This was created to help all members of the SS Sedan community find important information and statistics regarding this vehicle in a single location. It's best if viewed on a computer in Google Chrome or in the Google Sheets app. If viewing on a mobile device or in HTML view, the links and interactive portions don't work properly. Cycle through the tabs on the spreadsheet to go through the vast amounts of information.
+								<br>
+								The spreadsheet contains a lot of data, including:
+								<ul style="margin-left:15px;margin-right:15px">
+									<li>Production stats and changes for each model year</li>
+									<li>Monthly sales figures</li>
+									<li>Order guide changes for each model year</li>
+									<li>Chevrolet Pressroom releases</li>
+									<li>An interactive tool that people can enter their build info and get personalized stats</li>
+									<li>Miscellaneous info that contains the following (and much more):
+										<ul>
+											<li>Engine and performance specs</li>
+											<li>Pricing and warranty info</li>
+											<li>Wheel and tire specs</li>
+											<li>Light bulb replacement info</li>
+											<li>VIN decoding</li>
+											<li>Recall and technical service bulletin info with links to all related documents</li>
+											<li>Descriptions for each selectable driver mode</li>
+											<li>Wheel alignment specs for normal and track applications</li>
+											<li>Maintenance schedule and serviceable item info</li>
+											<li>Comparison of similar vehicles</li>
+											<li>A full breakdown of the GM Holden export programs to the U.S.</li>
+										</ul>
+									</li>
+								</ul>
+							</p>
+						</div>
+				</details>
+
+				<details style="min-width:800px;margin-bottom:10px;background-color:#cccccc;padding:10px 10px;border-radius:10px">
+					<summary style="font-weight:bold;outline:none">2011-2017 Chevrolet Caprice PPV Spreadsheet</summary>
+						<div style="margin-top:-5px;padding-bottom:1px;border-radius:5px;background-color:white">
+							<p style="padding-left:15px;padding-right:15px;padding-top:15px">
+								<a href="https://docs.google.com/spreadsheets/d/1K_qcaiIlc6tdv8cmhGAlSmnFAkhESurD3TILrSkVpsM/edit?usp=sharing" target="_blank">Chevrolet Caprice PPV (1EW19) Information Spreadsheet</a>
+							</p>
+							<p style="padding-left:15px;padding-right:15px">
+								I also built and currently maintain the 2011-2017 Chevrolet Caprice PPV spreadsheet on the SSforums. It doesn't contain as much info as the SS sheet, since the info is harder to come by and I don't own a Caprice PPV; but I have managed to scrounge up a lot more info than the NewCaprice forum was able to find.
+							</p>
+						</div>
+				</details>
+
+				<details style="min-width:800px;margin-bottom:10px;background-color:#cccccc;padding:10px 10px;border-radius:10px">
+					<summary style="font-weight:bold;outline:none">2003 Chevrolet Trailblazer Custom Audio System</summary>
+						<div style="margin-top:-5px;padding-bottom:1px;border-radius:5px;background-color:white">
+							<p style="padding-left:15px;padding-right:15px;padding-top:15px">
+								I researched and put together an entirely new audio system for my 2003 Trailblazer back in my Senior year of college. All of the installation was performed by me with the help of my Dad and his vast set of tools while I was home for a weekend. Unfortunately I didn't take too many pictures throughout the process because it was freezing cold outside (Pics to come soon). The following components were installed and the stock system was completely gutted:
+								<br>
+								<ul style="margin-left:15px;margin-right:15px">
+									<li>Head Unit: Clarion CX-501</li>
+									<li>Front Component Speakers: DLS X-SC62</li>
+									<li>Amp for Component Speakers: Boston Acoustics GTA-502</li>
+									<li>Subwoofer: Image Dynamics ID10  D2 V.3 (Sealed enclosure)</li>
+									<li>Amp for Subwoofer: MTX Thunder500.1</li>
+								</ul>
+							</p>
+							<p style="padding-left:15px;padding-right:15px">
+								This was my first ever install, and I learned a lot from this project. The DLS speakers sounded fantastic, but they have a relatively low sensitivity and I underestimated how much wind noise the Trailblazer was subjected to at highway speeds. I was extremely happy that I included an excessive amount of wiring for the subwoofer to allow me to put the enclosure on the front seat if I ever needed to fold down the rear seats to store stuff. This became quite useful in the four times I moved after installation.
+							</p>
+						</div>
+				</details>
+
+				<details style="min-width:800px;margin-bottom:10px;background-color:#cccccc;padding:10px 10px;border-radius:10px">
+					<summary style="font-weight:bold;outline:none">My Parent's Home Theater System</summary>
+						<div style="margin-top:-5px;padding-bottom:1px;border-radius:5px;background-color:white">
+							<p style="padding-left:15px;padding-right:15px;padding-top:15px">
+								I bought my parents a new home theater sound system to go with their new HD TV in 2014 after their old TV's internal lens melted and no longer properly combined the RGB colors on screen to make the image. It was actually a pretty funny image overall with a red, green, and blue image offset from one another and completely distorted around the edges. They previously had a Sony TV that was older than me - over 20 years old. Welcome to the current century, Mom and Dad!
+								<br><br>
+								They were previously utilizing a pair of Bose 901s that my Dad managed to snag from a band who was throwing them out after using them in their concert in the 70s. The issue was that it would have required spending thousands on equipment that could take the outdated 901s and connect them to the modern era TVs, since that technology died out decades ago - literally... I convinced them to upgrade to a modern sound system for less than what it would require to do that, and I offered to pay for the whole thing. It was a "thank you" for letting me live at home and commute to work after college until I paid off my student loan debt and got a new job. The system comprised of the following components and I set everything up myself:
+								<br>
+								<ul style="margin-left:15px;margin-right:15px">
+									<li>Head Unit: Denon AVR-X2000</li>
+									<li>LCR Speakers: Ascend Acoustics CMT-340 SE</li>
+									<li>Subwoofer: SVS SB-1000</li>
+								</ul>
+							</p>
+							<p style="padding-left:15px;padding-right:15px">
+								Overall this system came out fantastic! I have nothing but praise for all of the components involved. The only thing I would change after-the-fact would be to go with the SVS PB-1000 ported sub instead of the SB-1000 sealed sub due to my parent's living room being open to the kitchen, leading to a rather large environment that needs to move a lot of air. The PB-1000 is said to reach 10 dB higher than the SB-1000 (For those who don't know, that's quite a large jump on the logarithmic scale and will sound around twice as loud at peak volume).
+								<br><br>
+								I plan on getting myself some Ascend Acoustic Sierra Towers with RAAL tweeters in the future for my system. Very impressed with how much effort they put into their designs and I haven't heard a better tweeter than the RAAL ribbon. It makes vocals sound actually true-to-life, like the person is actually talking/singing right in front of you.
+							</p>
+						</div>
+				</details>
+
+				<!--
+				<hr>
+
+				<p>
+					Test section for a future update involving pics made by me in Rhino 3D. Not sure exactly what I will include, but I currently have over a couple dozen pics I previously made for SS-related things online.
+				</p>
+				<img src="./icons_and_images/ss_logo.png" alt="[SS Logo]" height="50"><br><br>
+				<img src="./icons_and_images/chevrolet_ss_pic.png" alt="[SS Pic]" height="150"><br><br>
+				<img src="./icons_and_images/audio_system.png" alt="[Audio System]" height="150"><br><br>
+				-->
+			</div>
+
+<!-- Notes tab content -->
+			<div id="Notes" class="navcontent">
+
+					<!-- Tab links -->
+					<div class="browser" style="margin-top:15px;margin-bottom:15px">
+						<p style="font-weight:bold">Compatibility Tests</p>
+						<p style="margin-left:11px;font-style:italic;font-size:14px">*Click on the browser icons to see any current compatibility issues</p>
+						<div class="browserbar">
+							<button class="browserlinks" onclick="openBrowser(event, 'Test')" id="defaultOpen" style="pointer-events:none;width:auto;min-width:175px;white-space:nowrap;margin-bottom:1px;border:1px solid white;border-bottom:2px solid white;background-color:#bfbfbf;color:black;font-size:15px;font-weight:bold" disabled>
+								Desktop Browsers:
+							</button>
+						  <button class="browserlinks" onclick="openBrowser(event, 'Chrome')" style="width:70px;border-top-right-radius:0px;border-bottom-right-radius:0px"><i class="fab fa-chrome"></i></button>
+						  <button class="browserlinks" onclick="openBrowser(event, 'Firefox')" style="width:70px;border-radius:0px"><i class="fab fa-firefox-browser"></i></button>
+						  <button class="browserlinks" onclick="openBrowser(event, 'Edge')" style="width:70px;border-radius:0px"><i class="fab fa-edge"></i></button>
+							<button class="browserlinks" onclick="openBrowser(event, 'IE')" style="width:70px;border-radius:0px"><i class="fab fa-internet-explorer"></i></button>
+						  <button class="browserlinks" onclick="openBrowser(event, 'Opera')" style="width:70px;border-radius:0px"><i class="fab fa-opera" style="padding-top:3px"></i></button>
+							<button class="browserlinks" onclick="openBrowser(event, 'Safari')" style="width:70px;border-top-left-radius:0px;border-bottom-left-radius:0px"><i class="fab fa-safari"></i></button>
+							<button class="browserlinks" onclick="openBrowser(event, 'Test')" id="defaultOpen" style="pointer-events:none;width:auto;min-width:160px;white-space:nowrap;margin-bottom:1px;border:1px solid white;border-bottom:2px solid white;background-color:#bfbfbf;color:black;font-size:15px;font-weight:bold" disabled>
+								Mobile Browsers:
+							</button>
+						  <button class="browserlinks" onclick="openBrowser(event, 'Android')" style="width:70px;border-top-right-radius:0px;border-bottom-right-radius:0px"><i class="fab fa-android" style="padding-top:5px"></i></button>
+							<button class="browserlinks" onclick="openBrowser(event, 'iOS')" style="width:70px;border-top-left-radius:0px;border-bottom-left-radius:0px"><i class="fab fa-apple"></i></button>
+							<button class="browserlinks" onclick="openBrowser(event, 'Test')" id="defaultOpen" style="pointer-events:none;width:auto;min-width:220px;white-space:nowrap;margin-bottom:1px;border:1px solid white;border-bottom:2px solid white;background-color:#bfbfbf;color:black;font-size:15px;font-weight:bold" disabled>
+								Last tested on 2020-03-15
+							</button>
+						</div>
+
+						<!-- Tab content -->
+						<div id="Chrome" class="browsercontent">
+						  <p style="font-weight:bold">Google Chrome 80</p>
+							<p style="font-size:14px">
+								<ul>
+									<li>Page reload flashes</li>
+								</ul>
+							</p>
+						</div>
+						<div id="Firefox" class="browsercontent">
+						  <p style="font-weight:bold">Mozilla Firefox 74</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>No issues from what I can see</li>
+								</ul>
+							</p>
+						</div>
+						<div id="Edge" class="browsercontent">
+						  <p style="font-weight:bold">Microsoft Edge 44</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>Edge doesn't support dropdown details, so Notes tab changelog is fully displayed at all times</li>
+									<li>I experienced an issue with the LinkedIn icon doubling and having no format; Turning "Reading View" in the address bar on then off fixed this, but not sure if it's just on my end or if everyone else will experience this</li>
+								</ul>
+							</p>
+						</div>
+						<div id="IE" class="browsercontent">
+						  <p style="font-weight:bold">Microsoft Internet Explorer 11</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>IE11 doesn't support dropdown details, so Notes tab changelog is fully displayed at all times</li>
+								</ul>
+							</p>
+						</div>
+						<div id="Opera" class="browsercontent">
+						  <p style="font-weight:bold">Opera 67</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>Page reload flashes</li>
+								</ul>
+							</p>
+						</div>
+						<div id="Safari" class="browsercontent">
+						  <p style="font-weight:bold">Safari</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>My friend tested this on his Mac and said it was good</li>
+								</ul>
+							</p>
+						</div>
+						<div id="Android" class="browsercontent">
+						  <p style="font-weight:bold">Android</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>Currently incompatible (Mobile support to come in the future)</li>
+								</ul>
+							</p>
+						</div>
+						<div id="iOS" class="browsercontent">
+						  <p style="font-weight:bold">iOS</p>
+						  <p style="font-size:14px">
+								<ul>
+									<li>Currently incompatible (Mobile support to come in the future)</li>
+								</ul>
+							</p>
+						</div>
+
+					</div>
+
+
+
+				<!-- Version 1 Changelog Dropdown -->
+				<details style="margin-bottom:15px">
+					<summary style="font-weight:bold;outline:none">
+						Version 1 (<a href="http://www.google.com/images?q=Al-mi&#39;raj" target="_blank">Al-mi'raj</a>) Changelog</summary>
+					<ul style="font-size:14px">
+						<li>2020-03-05
+							<ul>
+								<li>Began designing initial website</li>
+							</ul>
+						</li>
+						<li>2020-03-06
+							<ul>
+								<li>Updated with tab-style browsing</li>
+								<li>Filled out color schemes</li>
+								<li>Added info to Home tab</li>
+							</ul>
+						</li>
+						<li>2020-03-07
+							<ul>
+								<li>Updated tab layout to a modern look with no borders and solid colors</li>
+								<li>Started adding descriptions to each tab</li>
+								<li>Verified compatibility with multiple browsers and Android</li>
+								<li>Added script to check whether viewing on desktop or mobile (Doesn't actually do anything yet)</li>
+							</ul>
+						</li>
+						<li>2020-03-09
+							<ul>
+								<li>Updated to a vertical tab layout on the side</li>
+								<li>Swapped to Penn State official color scheme
+									<ul>
+										<li>Dark blue: Pantone 282</li>
+										<li>White</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>2020-03-10
+							<ul>
+								<li>Added info to Career tab</li>
+								<li>Added icons and images to navigation bar</li>
+								<li>Diagnosed some issues with browser compatibility
+									<ul>
+										<li>I think many of these issues are because I'm opening the file locally and don't have the hosted website fully setup for online access</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>2020-03-11
+							<ul>
+								<li>Incorporated buttons for changing tab layouts and remembering the layouts through a cookie</li>
+								<li>Corrected Career tab layout by rewriting some code that had issues</li>
+								<li>Corrected some navbar issues where sometimes the smann logo was wider than the rest of the bar on vertical tab layout</li>
+								<li>Added info to Hobbies tab</li>
+							</ul>
+						</li>
+						<li>2020-03-12
+							<ul>
+								<li>Added info to Profile and Education tabs</li>
+								<li>Added "Trailblazer Custom Audio System" to Hobbies tab</li>
+								<li>Created new icons and logos</li>
+							</ul>
+						</li>
+						<li>2020-03-13
+							<ul>
+								<li>Website now fully hosted for online access!</li>
+								<li>Added "Parent's Home Theater System" to Hobbies tab</li>
+								<li>Created new logos for my friend's website</li>
+							</ul>
+						</li>
+						<li>2020-03-14
+							<ul>
+								<li>Added "My 2015 Chevy SS LSA Install" to Hobbies tab</li>
+								<li>Added LinkedIn hyperlink icon in navbar</li>
+								<li>Renamed navigation classes to what they actually represent</li>
+								<li>Helped my friend redo his website with tab navigation like mine</li>
+							</ul>
+						</li>
+						<li>2020-03-15
+							<ul>
+								<li>Changed highlighted tab color from gold to gray/blue to get away from the gold and Penn State dark blue looking like Michigan's color scheme (Yuck haha)</li>
+								<li>Added email hyperlink icon in navbar</li>
+								<li>Added professional references to Career tab</li>
+								<li>Fully integrated Education tab into Profile tab</li>
+								<li>Updated skills on Profile tab</li>
+								<li>Redesigned Notes tab since it was a complete eye-sore before</li>
+							</ul>
+						</li>
+						<li>2020-03-16
+							<ul>
+								<li>Updated Hobbies tab to have dropdowns for each section</li>
+								<li>Fixed some compatibility issues</li>
+							</ul>
+						</li>
+					</ul>
+				</details>
+
+				<!-- Version 2 Changelog Dropdown -->
+				<!--
+				<details>
+					<summary style="font-weight:bold;outline:none">
+						Version 2 (<a href="http://www.google.com/images?q=Bakezōri" target="_blank">Bakezōri</a>) Changelog</summary>
+					<ul style="font-size:14px">
+						<li>Date
+							<ul>
+								<li>Began major website update</li>
+								<li>Began mobile design</li>
+							</ul>
+						</li>
+					</ul>
+				</details>
+				-->
+
+			</div>
+
+		</div>
+
+<!--Selecting stylesheet to use-->
+		<script>
+			function setActiveStyleSheet(title) {
+   			var i, a, main;
+   			for(i=0; (a = document.getElementsByTagName("link")<i>); i++) {
+     			if(a.getAttribute("rel").indexOf("style") != -1
+        			&& a.getAttribute("title")) {
+       			a.disabled = true;
+       			if(a.getAttribute("title") == title) a.disabled = false;
+     			}
+   			}
+			}
+		</script>
+
+<!-- Navigation tab functionality -->
+		<script>
+			function openTab(evt, tabName) {
+	  		// Declare all variables
+	  		var i, navcontent, navtabs;
+
+	  		// Get all elements with class="tabcontent" and hide them
+	  		navcontent = document.getElementsByClassName("navcontent");
+	  		for (i = 0; i < navcontent.length; i++) {
+	    		navcontent[i].style.display = "none";
+	  		}
+
+	  		// Get all elements with class="tablinks" and remove the class "active"
+	  		navtabs = document.getElementsByClassName("navtabs");
+	  		for (i = 0; i < navtabs.length; i++) {
+	    		navtabs[i].className = navtabs[i].className.replace(" active", "");
+	  		}
+
+	  		// Show the current tab, and add an "active" class to the button that opened the tab
+	  		document.getElementById(tabName).style.display = "block";
+	  		evt.currentTarget.className += " active";
+			}
+		</script>
+
+<!-- Open "Home" navigation tab by default (defaultOpen in Tab Links above) -->
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
+
+<!-- Browser tabs in Notes section functionality -->
+		<script>
+			function openBrowser(evt, browserName) {
+				// Declare all variables
+				var i, browsercontent, browserlinks;
+
+				// Get all elements with class="tabcontent" and hide them
+				browsercontent = document.getElementsByClassName("browsercontent");
+				for (i = 0; i < browsercontent.length; i++) {
+					browsercontent[i].style.display = "none";
+				}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				browserlinks = document.getElementsByClassName("browserlinks");
+				for (i = 0; i < browserlinks.length; i++) {
+					browserlinks[i].className = browserlinks[i].className.replace(" active", "");
+				}
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(browserName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>
+
+	</body>
+	<style>
+		html {visibility:visible}
+	</style>
+</html>

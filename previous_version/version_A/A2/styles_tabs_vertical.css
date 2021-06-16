@@ -1,0 +1,139 @@
+
+/* Tab button styling */
+
+* {box-sizing: border-box}
+
+/* Style the overall navigation bar */
+.nav {
+  align-items: stretch;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Style the overall navigation bar */
+.navbar {
+  float: left;
+  position: relative; /* position: fixed to stay visible at all times, position: relative to hide with scroll */
+  min-height: 100vh;
+  width: 150px;
+  min-width: 150px; /* DO NOT DELETE!!! This is needed or else the navigation bar becomes narrower on IE11. */
+  /* border-right: 15px solid white; /* Only if .nav position: fixed */
+  background-color: #041e42;
+}
+
+/* Style the buttons that are used to open the tab content */
+.navbar button {
+  float: left;
+  display: block;
+  height: 60px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+  background-color: #041e42;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.navbar button:hover:not([disabled]) {
+  width: 140px;
+  margin-left: 5px;
+  border-radius: 13px;
+  background-color: #54657c;
+  color: white;
+  vertical-align: middle;
+}
+
+/* Create an active/current "tab button" class */
+.navbar button.active {
+  transition: 0.2s;
+  vertical-align: middle;
+  width: 149px !important;
+  margin-left: 1px !important;
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-right: 1px solid white !important;
+  background-color: white !important;
+  color: #041e42 !important;
+  font-weight: bold;
+}
+
+.navdivider {
+  display: inline-block;
+  height: 5px !important;
+  padding: 0px 0px !important;
+  pointer-events: none !important;
+}
+
+/* Disable hover effects on disabled "tab button" class */
+.navimage {
+  display: none !important; /* Toggle this to turn this navheader section on/off */
+  pointer-events: none;
+  height: 200px !important;
+  padding: 0px 0px !important;
+  text-align: center;
+}
+
+/* Style the header name */
+.navname {
+  pointer-events: none;
+  vertical-align: center;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+#separator {
+  height: 10px !important;
+}
+
+.navlinksvertical {
+  float: left;
+  position: absolute;
+  bottom: 60px !important;
+  left: 0px;
+  pointer-events: none;
+  width: 100%;
+  border-radius: 0px !important;
+  background-color: #041e42;
+  text-align: center;
+}
+
+.navlinkshorizontal {
+  display: none !important;
+}
+
+/* Style the footer */
+.navlogo {
+  float: left;
+  position: absolute;
+  bottom: 0px !important;
+  left: 0px;
+  height: 60px !important;
+  width: 150px !important;
+  /* pointer-events: none; /* Toggle this if not needing to link to a test main.html page */
+  margin-left: 0px !important;
+  border-radius: 0px !important;
+  background-color: #041e42 !important;
+}
+
+/* Style the tab content */
+.navcontent {
+  display: none;
+  float: left;
+  min-height: 100vh;
+  width: calc(100% - 150px);
+  padding: 0px 15px;
+  /* padding-left: 170px; /* Only if .nav position: fixed */
+  background-color: white !important;
+}
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */

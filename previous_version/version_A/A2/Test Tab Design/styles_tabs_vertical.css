@@ -1,0 +1,223 @@
+
+/* Tab button styling */
+<style>
+
+  * {box-sizing: border-box}
+
+  /* Style the overall navigation bar */
+  .nav {
+    align-items: stretch;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  /* Style the overall navigation bar */
+  .navbar {
+    overflow: hidden;
+    float: left;
+    position: relative; /* position: fixed to stay visible at all times, position: relative to hide with scroll */
+    height: 100vh;
+    /* min-height: 100vh; */
+    width: 150px;
+    min-width: 150px; /* DO NOT DELETE!!! This is needed or else the navigation bar becomes narrower on IE11. */
+    /* border-right: 15px solid white; /* Only if .nav position: fixed */
+    background-color: inherit;
+
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .navbar button {
+    display: block;
+    transition: 0.2s;
+    height: 10%;
+    min-height: 60px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid white;
+    border-right: 2px solid white;
+    padding: 12px 12px;
+    cursor: pointer;
+    background-color: #041e42;
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px !important;
+  }
+
+  /* Change background color of buttons on hover */
+  .navbar button:hover:not([disabled]) {
+    background-color: #54657c;
+    color: white;
+  }
+
+  /* Create an active/current "tab button" class */
+  .navbar button.active {
+    left: 1px;
+    position: relative;
+    background-color: white !important;
+    color: #041e42 !important;
+    border: 1px solid #041e42;
+    border-right: 1px solid white;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px !important;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+  /* Disable hover effects on disabled "tab button" class */
+  .navimage {
+    display: none !important; /* Toggle this to turn this navheader section on/off */
+    pointer-events: none;
+    height: 200px !important;
+    padding: 0px 0px !important;
+    text-align: center;
+  }
+
+  /* Style the header name */
+  .navname {
+    pointer-events: none;
+    height: 10% !important;
+    min-height: 60px !important;
+    vertical-align: center;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none !important;
+    border-radius: 15px;
+    border: 1px solid white;
+    border-right: 2px solid white;
+    background-color: #bfbfbf !important;
+    color: black !important;
+    margin-top: 3px;
+  }
+
+  .navgap {
+    pointer-events: none;
+    background-color: #bfbfbf !important;
+    border-radius: 15px;
+    height: 27% !important;
+    min-height: 50px !important;
+  }
+
+  .navlinkshorizontal {
+    float: left;
+    height: 3% !important;
+    min-height: 50px !important;
+    pointer-events: none;
+    width: 150px;
+    border-radius: 15px;
+    border: 1px solid white;
+    border-right: 2px solid white;
+    background-color: #041e42;
+    text-align: center;
+  }
+
+  .navlinksvertical {
+    display: none !important;
+  }
+
+  /* Style the footer */
+  .navlogo {
+    /* display: none; /* Toggle this to turn this navfooter section on/off */
+    display: block;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    pointer-events: none;
+    height: 10% !important;
+    min-height: 60px !important;
+    width: 150px;
+    border: 1px solid white;
+    border-right: 2px solid white;
+    border-radius: 15px;
+    background-color: #bfbfbf !important;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-right: 1px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /* Style the tab content */
+  .navcontent {
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 1px 16px;
+    background-color: white !important;
+    border: 1px solid #041e42;
+    border-radius: 15px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -1px;
+  }
+
+
+
+/* #041E42 - Penn State dark blue
+   #fce482 - Light yellow
+   #f9c806 - Bright gold */
+
+
+
+/* Apply browser styling on Notes tab */
+ /* Style the tab */
+ .browserbar {
+   display: inline-flex;
+   overflow: hidden;
+   background-color: inherit;
+ }
+
+ /* Style the buttons that are used to open the tab content */
+ .browserbar button {
+   background-color: #041e42;
+   color: white;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   min-width: 70px;
+   padding: 7px 15px;
+   transition: 0.2s;
+   font-size: 25px;
+   border: 1px solid white;
+   border-radius: 12px;
+   margin-bottom: 1px;
+   text-align: center;
+ }
+
+ /* Change background color of buttons on hover */
+ .browserbar button:hover:not([disabled]) {
+   background-color: #54657c;
+   color: white;
+ }
+
+ /* Create an active/current tablink class */
+ .browserbar button.active {
+   background-color: white !important;
+   color: #041e42 !important;
+   border: 1px solid #041e42;
+   border-bottom: 2px solid white;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   margin-bottom: -1px;
+ }
+
+ /* Style the tab content */
+ .browsercontent {
+   display: none;
+   min-width: 1067px;
+   padding: 1px 16px;
+   border: 1px solid #041e42;
+   border-radius: 15px;
+   margin-top: -1px;
+ }
+</style>

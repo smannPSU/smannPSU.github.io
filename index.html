@@ -1,0 +1,1620 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180368508-1"></script>
+		<script>
+		    window.dataLayer = window.dataLayer || [];
+		    function gtag(){dataLayer.push(arguments);}
+		    gtag('js', new Date());
+		    gtag('config', 'UA-180368508-1');
+		</script>
+        <!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="description" content="Stephen Mann's Website">
+  	    <meta name="keywords" content="HTML, CSS, JavaScript">
+  	    <meta name="author" content="Stephen Mann">
+		<meta name='date' content="March 5, 2019">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Open graph protocol metadata -->
+		<meta property="og:title" content="Stephen Mann's Website | smann">
+		<meta property="og:description" content="Cycle through the tabs to navigate each section and learn more about me.">
+		<meta property="og:type" content="Website">
+		<meta property="og:image" content="./image/smann_logo/smann_thumbnail.png">
+		<meta property="og:url" content="https://smann.ddns.net/">
+		<!-- Website title in browser's tab -->
+		<title>Stephen Mann's Website</title>
+		<!-- Icon in browser's tab -->
+		<link rel="shortcut icon" href="./icon/favicon/favicon33.ico" type="image/x-icon"/>
+		<!-- Load icons for using throughout the webpage -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FortAwesome/Font-Awesome/master/css/all.css" media="screen"/>
+		<!-- Load overall styles -->
+		<link rel="stylesheet" type="text/css" href="./style.css" title="Styles" media="screen"/>
+		<!-- Load font styles -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=fallback"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=fallback"/>
+        <!-- Add JQuery library from Google CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Call Javascript functions -->
+        <script src="./javascript.js" defer></script>
+	</head>
+
+    <!-- OVERALL BODY -->
+	<body>
+
+		<!-- Initial splash screen -->
+		<div id="splashScreen" class="splashScreen">
+			<div class="splashText">
+				<div class="firstLetter">s</div><div class="lastName">mann</div>
+			</div>
+		</div>
+
+		<!-- Navigation bar -->
+        <nav id="navigation">
+            <div class="smannLogo">
+                <a href="./image/smann_logo/smann.png" target="_blank"><span>s</span>mann</a>
+            </div>
+            <div class="navTabs">
+                <ul class="tabsList">
+                    <li class="active"><a href="#home"><i class="fas fa-home"></i><span><span class="extraSpace">&ensp;</span>Home</span></a></li>
+                    <li><a href="#profile"><i class="fas fa-user-alt"></i><span><span class="extraSpace">&ensp;</span>Profile</span></a></li>
+                    <li><a href="#career"><i class="fas fa-briefcase"></i><span><span class="extraSpace">&ensp;</span>Career</span></a></li>
+                    <li><a href="#hobbies"><i class="fas fa-grin-alt"></i><span><span class="extraSpace">&ensp;</span>Hobbies</span></a></li>
+                    <li><a href="#notes"><i class="fas fa-sticky-note"></i><span><span class="extraSpace">&ensp;</span>Notes</span></a></li>
+                </ul>
+            </div>
+            <div class="tabLinks">
+                <div class="modalButton">
+                    <button id="modalButtonHeader" title="My Résumé"><i class="fas fa-file-pdf"></i></button>
+                </div>
+                <a href="https://www.linkedin.com/in/stephenarthurmann" target="_blank" title="My LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:smann.psu@gmail.com" target="_blank" title="My Email&#10;&#10;Right-click and select 'Copy email address' or 'Copy shortcut' if you wish to copy the email address to your clipboard."><i class="fas fa-envelope"></i></a>
+            </div>
+        </nav>
+
+		<!-- The modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modalContent">
+				<div class="modalHeader">
+					<h3>Résumé Versions</h3>
+					<span class="closeModal">&times;</span>
+				</div>
+				<div class="modalBody">
+					<a href="./file/stephen_mann_resume.pdf" class="targetBlank" target="_blank">Formatted PDF Version</a>
+					<a href="./file/stephen_mann_resume.pdf" class="targetDefault">Formatted PDF Version</a>
+					<a href="./file/stephen_mann_resume_plain_text.pdf" class="targetBlank" target="_blank">Plain Text PDF Version</a>
+					<a href="./file/stephen_mann_resume_plain_text.pdf" class="targetDefault">Plain Text PDF Version</a>
+				</div>
+				<div class="modalFooter">
+					<h3>*Choose from the options above</h3>
+				</div>
+			</div>
+		</div>
+
+	    <div id="container" class="container">
+
+            <!-- HOME TAB CONTENT -->
+            <div id="home" class="tab active">
+                <div class="tabContent">
+                    <h3>
+                        Hello, Everyone!
+                    </h3>
+                    <div class="textWelcome">
+                        <p>
+                            My name is <b>Stephen Mann</b>, and this is the website I have built from scratch. Feel free to cycle through the tabs to navigate each section and learn more about me.
+                            <br><br>
+                            I started this website to teach myself new &lt;coding&gt; techniques as it has always been something I have been interested in learning.  To challenge myself, I didn’t utilize any websites (i.e., Wordpress, Wix, Squarespace, etc.) that would do much of the work for me. Development began in a .txt file out of Notepad, then saving-as a .html file, and finally opening that file in a browser to check to see if everything was done properly. As you can imagine, this was quite tedious, so I swapped over to utilizing a text editor program called Atom IDE. It made everything easier with its syntax highlighting and overall layout. After that, everything started to fall into place and development proceeded swiftly.
+                            <br><br>
+                            This website is stored on my GitHub account and fully hosted on my friend's server. If you are having trouble accessing this website, come back in a couple of hours and it should be back up and running. I will be creating my own Linux server someday, and then all hosting will be done there. If you notice any issues or have any advice on how to improve the coding, please email me to let me know. I'm always open to constructive criticism and adding new content.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="welcomePic" src="./image/profile_pic/welcome_pic.jpg" alt="[Welcoming Pic]">
+                    </div>
+                    <div class="textBottom">
+                        <div class="textRecent">
+                            <p>
+                                Major Recent Changes
+                            </p>
+                            <ul>
+                                <li>Completely overhauled the website's design to improve user experience and make it easier for me to make future changes</li>
+                                <li>Finished creating a mobile design</li>
+                                <li>Added an Education section to the bottom of the Profile tab</li>
+                                <li>Added a footer area at the bottom of each tab with links to files and URLs relevant to me</li>
+                            </ul>
+                        </div>
+                        <div class="textSpacer"><br></div>
+                        <div class="textUpdate">
+                            <p>
+                                Updates in the Future
+                            </p>
+                            <ul>
+                                <li>Rework the entire website with a mobile-first and responsive design to reduce coding by 15-25% and improve the ease of making future changes</li>
+                                <li>Rework the table on the Profile tab to be more interactive and visually appealing</li>
+                                <li>Maybe create themes that visitors can choose to reskin the page</li>
+                                <li>Maybe force reload of the same tab on refresh, but not when exiting and re-entering tab/browser</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE TAB CONTENT -->
+            <div id="profile" class="tab">
+                <div class="tabContent">
+                    <h3>
+                        Biography
+                    </h3>
+                    <div class="textBiography">
+                        <p>
+                            I am an engineer with over <span id="hideNumYearsProfile"></span><input type="text" id="numberOfYearsProfileTab" disabled="disabled"> years of professional experience located out of Pittsburgh, PA.
+                            <br><br>
+                            My expertise includes implementing continuous improvement concepts, creating and modifying code in programming languages such as VBA Editor, XML, and HTML, managing remote server systems, and developing 3D CAD models for engineering designs. I enjoy performing engineering evaluations and advanced analyses to work toward final project realization, as well as utilizing CAD programs to design 3D models.
+                            <br><br>
+                            My former colleagues would describe me as a resourceful and driven person who is always willing to go the extra distance to ensure everything is completed with optimal quality.
+                            <!-- <br><br>
+                            I am currently seeking new engineering opportunities that will allow me to utilize my education and skills while working on complicated projects. My specific fields of interest include engineering in the nuclear, mechanical, software, or oil and gas industries; although I am open to opportunities outside of those areas. -->
+                        </p>
+                    </div>
+                    <br>
+
+                    <div class="profileTable">
+                        <table class="aboutMe">
+                            <tr class="rowTop">
+                                <th class="tableIcon"><i class="fas fa-address-card"></i></th>
+                                <th class="tableText">About Me</th>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-file-signature"></i></td>
+                                <td class="tableText">Stephen A. Mann</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-university"></i></td>
+                                <td class="tableText">Penn State University &ndash; University Park</td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-calendar-alt"></i></td>
+                                <td class="tableText">Class of 2012</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-atom"></i></td>
+                                <td class="tableText">Bachelor of Science in Nuclear Engineering</td>
+                            </tr>
+                            <tr  class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-tools"></i></td>
+                                <td class="tableText">Minor in Engineering Mechanics</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-university"></i></td>
+                                <td class="tableText">Community College of Allegheny County</td>
+                            </tr>
+                            <tr  class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-file-code"></i></td>
+                                <td class="tableText">Associate of Science in Software Development (Pursuing)</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-map-marker-alt"></i></td>
+                                <td class="tableText">Located in Pittsburgh, PA</td>
+                            </tr>
+                            <tr  class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-car"></i></td>
+                                <td class="tableText">Willing to Travel for Work</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fab fa-linkedin"></i></td>
+                                <td class="tableText">www.linkedin.com/in<br>/stephenarthurmann</td>
+                            </tr>
+                        </table>
+
+                        <img class="profilePic" src="./image/profile_pic/profile_pic.jpg" alt="[Profile Pic]">
+
+                        <table class="skills skillsDisappear">
+                            <tr class="rowTop">
+                                <th class="tableText">Quick Skills</th>
+                                <th class="tableIcon"><i class="fas fa-star"></i></th>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableText">Technical Writing</td>
+                                <td class="tableIcon"><i class="fas fa-file-alt"></i></td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableText">Computer-Aided Design (CAD)</td>
+                                <td class="tableIcon"><i class="fas fa-laptop"></i></td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableText">Coding</td>
+                                <td class="tableIcon"><i class="fas fa-code"></i></td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableText">Nuclear / Mechanical / Petroleum Engineering</td>
+                                <td class="tableIcon"><i class="fas fa-drafting-compass"></i></td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableText">Microsoft Windows and Office Products</td>
+                                <td class="tableIcon"><i class="fab fa-microsoft"></i></td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableText">Critical Thinking and Problem Solving</td>
+                                <td class="tableIcon"><i class="fas fa-lightbulb"></i></td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableText">Excellent Communication</td>
+                                <td class="tableIcon"><i class="fas fa-comment"></i></td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableText">Continuous Improvement</td>
+                                <td class="tableIcon"><i class="fas fa-infinity"></i></td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableText">Leader / Mentor / Team Member / Independent Worker</td>
+                                <td class="tableIcon"><i class="fas fa-user-friends"></i></td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableText">Open to New Things and Adaptable to New Industries</td>
+                                <td class="tableIcon"><i class="fas fa-door-open"></i></td>
+                            </tr>
+                        </table>
+
+                        <table class="skills skillsAppear">
+                            <tr class="rowTop">
+                                <th class="tableIcon"><i class="fas fa-star"></i></th>
+                                <th class="tableText">Quick Skills</th>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-file-alt"></i></td>
+                                <td class="tableText">Technical Writing</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-laptop"></i></td>
+                                <td class="tableText">Computer-Aided Design (CAD)</td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-code"></i></td>
+                                <td class="tableText">Coding</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-drafting-compass"></i></td>
+                                <td class="tableText">Nuclear / Mechanical / Petroleum Engineering</td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fab fa-microsoft"></i></td>
+                                <td class="tableText">Microsoft Windows and Office Products</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-lightbulb"></i></td>
+                                <td class="tableText">Critical Thinking and Problem Solving</td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-comment"></i></td>
+                                <td class="tableText">Excellent Communication</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-infinity"></i></td>
+                                <td class="tableText">Continuous Improvement</td>
+                            </tr>
+                            <tr class="rowOdd">
+                                <td class="tableIcon"><i class="fas fa-user-friends"></i></td>
+                                <td class="tableText">Leader / Mentor / Team Member / Independent Worker</td>
+                            </tr>
+                            <tr class="rowEven">
+                                <td class="tableIcon"><i class="fas fa-door-open"></i></td>
+                                <td class="tableText">Open to New Things and Adaptable to New Industries</td>
+                            </tr>
+                        </table>
+                        <div class="footNote">
+                            <p>
+                                *Check out my Career tab to see a detailed version of my résumé and to see some work samples of 3D CAD renderings I've created.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <div class="education">
+                        <div class="PSU">
+                            <p class="educationTop">
+                                <b>The Pennsylvania State University</b>
+                            </p>
+                            <p class="educationTopFull">
+                                Department of Mechanical and Nuclear Engineering
+                            </p>
+                            <p class="educationTopSimplified">
+                                Dept. of Mechanical & Nuclear Engineering
+                            </p>
+                            <p>
+                                <a href="https://www.psu.edu/" target="_blank">
+                                    <img src="./image/education_related/PSU_logo.png" class="bigLogo" alt="[PSU Logo]">
+                                </a>
+                            </p>
+                            <p class="educationBottomFull">
+                                B.S. in Nuclear Engineering, Minor in Engineering Mechanics<br>
+                            </p>
+                            <p class="educationBottomSimplified">
+                                B.S. in Nuclear Engineering, Engr. Mechanics
+                            </p>
+                            <p>
+                                August 2008 &ndash; May 2012
+                            </p>
+                        </div>
+
+                        <div class="CCAC">
+                            <p class="educationTop">
+                                <b>Community College of Allegheny County</b>
+                            </p>
+                            <p class="educationTopFull">
+                                Department of Computer Information Technology
+                            </p>
+                            <p class="educationTopSimplified">
+                                Dept. of Computer Information Technology
+                            </p>
+                            <p>
+                                <a href="https://www.ccac.edu/" target="_blank">
+                                    <img src="./image/education_related/CCAC_logo.png" class="bigLogo" alt="[CCAC Logo]">
+                                </a>
+                            </p>
+                            <p>
+                                A.S. in Software Development<br>
+                                August 2020 &ndash; 2022 <i>(Projected)</i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footNote">
+                        <p>
+                            *I am currently pursuing an Associate of Science degree in Software Development from CCAC.
+                        </p>
+                    </div>
+
+                    <br>
+
+                    <div class="completedCourses">
+                        <p>
+                            <b><u>CCAC Courses</u></b><br>
+                            <b>CIT-115: Introduction to Information Technology</b><br>
+                            <b>CIT-111: Introduction to Programming: Java</b><br>
+                            <b>CIT-120: Networking</b><br>
+                            CIT-130: Object-Oriented Programming 1: Java<br>
+                            CIT-125: Web Development
+                        </p>
+                    </div>
+                    <div class="footNote">
+                        <p>
+                            *Bold = Completed
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CAREER TAB CONTENT -->
+            <div id="career" class="tab">
+                <div class="tabContent">
+                    <h3>
+                        Engineer with <span id="hideNumYearsCareer"></span><input type="text" id="numberOfYearsCareerTab" disabled="disabled">+ Years of Experience
+                    </h3>
+
+                    <div class="professional">
+                        <div class="sensia">
+                            <p>
+                                <b>Sensia LLC</b><br>
+                                Measurement Solutions
+                            </p>
+                            <p>
+                                <a href="https://www.sensiaglobal.com/" target="_blank">
+                                    <img src="./image/work_related/sensia_logo.png" class="bigLogo" alt="[Sensia Logo]">
+                                </a>
+                            </p>
+                            <table class="jobBreakdownTable">
+                                <tr>
+                                    <td class="jobPosition">Field Service Engineer</td>
+                                    <td class="jobDates">November 23, 2020 &ndash; Present</td>
+                                </tr>
+                            </table>
+                            <div class="jobBreakdownSimplified">
+                                <p>
+                                    Field Service Engineer<br>
+                                    <i>(November 23, 2020 &ndash; Present)</i><br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <br class="brRemove">
+
+                        <div class="halliburton">
+                            <p>
+                                <b>Halliburton Energy Services, Inc.</b><br>
+                                Production Enhancement
+                            </p>
+                            <p>
+                                <a href="https://www.halliburton.com/" target="_blank">
+                                    <img src="./image/work_related/halliburton_logo.png" class="bigLogo" alt="[Halliburton Logo]">
+                                </a>
+                            </p>
+                            <table class="jobBreakdownTable">
+                                <tr>
+                                    <td class="jobPosition">Technical Professional</td>
+                                    <td class="jobDates">August 1, 2016 &ndash; May 24, 2019</td>
+                                </tr>
+                                <tr>
+                                    <td class="jobPosition">Associate Technical Professional</td>
+                                    <td class="jobDates">June 24, 2014 &ndash; July 31, 2016</td>
+                                </tr>
+                            </table>
+                            <div class="jobBreakdownSimplified">
+                                <p>
+                                    Technical Professional<br>
+                                    <i>(August 1, 2016 &ndash; May 24, 2019)</i><br>
+                                    Associate Technical Professional<br>
+                                    <i>(June 24, 2014 &ndash; July 31, 2016)</i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="murtech">
+                            <p>
+                                <b>Murtech, Inc.</b><br>
+                                Engineering
+                            </p>
+                            <p>
+                                <a href="https://www.murtech.us/" target="_blank">
+                                    <img src="./image/work_related/murtech_logo.png" class="bigLogo" alt="[Murtech Logo]">
+                                </a>
+                            </p>
+                            <table class="jobBreakdownTable">
+                                <tr>
+                                    <td class="jobPosition">Engineer</td>
+                                    <td class="jobDates">May 24, 2012 &ndash; June 5, 2014</td>
+                                </tr>
+                                <tr>
+                                    <td class="jobPosition">Engineering Internship</td>
+                                    <td class="jobDates">June 18, 2008 &ndash; May 23, 2012</td>
+                                </tr>
+                            </table>
+                            <div class="jobBreakdownSimplified">
+                                <p>
+                                    Engineer<br>
+                                    <i>(May 24, 2012 &ndash; June 5, 2014)</i><br>
+                                    Engineering Internship<br>
+                                    <i>(June 18, 2008 &ndash; May 23, 2012)</i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <br class="brRemove">
+
+                        <div class ="smallLogos">
+                            <img src="./image/work_related/sensia_logo_small.png" class="bigLogo" alt="[Sensia Logo Small]">&nbsp;&nbsp;<span id="hideNumMonthsCurrentJob"></span><input type="text" id="numberOfMonthsCurrentJob" disabled="disabled">&nbsp;months&nbsp;&nbsp;&nbsp;
+                            <img src="./image/work_related/halliburton_logo_small.png" class="bigLogo" alt="[Halliburton Logo Small]">&nbsp;&nbsp;59 months&nbsp;&nbsp;&nbsp;
+                            <img src="./image/work_related/murtech_logo_small.png" class="bigLogo" alt="[Murtech Logo Small]">&nbsp;&nbsp;37 months
+                        </div>
+                    </div>
+
+                    <!--
+                    <h3>
+                        Professional References
+                    </h3>
+
+                    <div class="professional">
+                        <div class="references">
+                            <p class="reference1">
+                                <b>Adam Shanks</b><br>
+                                Supervisor/Coworker at Halliburton<br><br>
+                                Lead Technical Professional <i>(Former)</i><br>
+                                Halliburton Energy Services, Inc.<br>
+                                4999 East Pointe Dr.<br>
+                                Zanesville, OH 43701
+                            </p>
+                            <p class="reference2">
+                                <b>Matthew Cunkelman</b><br>
+                                Coworker at Halliburton<br><br>
+                                Autonomous Systems Engineer<br>
+                                Uber Advanced Technologies Group<br>
+                                3011 Smallman St.<br>
+                                Pittsburgh, PA 15201
+                            </p>
+                        </div>
+                        <div class="references">
+                            <p class="reference3">
+                                <b>Scot Sloan</b><br>
+                                Coworker at Halliburton<br><br>
+                                Electronics Technician <i>(Former)</i><br>
+                                Halliburton Energy Services, Inc.<br>
+                                4999 East Pointe Dr.<br>
+                                Zanesville, OH 43701
+                            </p>
+                            <p class="reference4">
+                                <b>Robert Murtha</b><br>
+                                Supervisor at Murtech<br><br>
+                                President and Principal Engineer<br>
+                                Murtech, Inc.<br>
+                                820 Cromwell Park Dr.<br>
+                                Glen Burnie, MD 21061
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footNote">
+                        <p>
+                            *I have more professional references with full contact information available on request.<br>
+                            **Please note: The details listed above may be out of date.
+                        </p>
+                    </div>
+                    -->
+
+                    <hr>
+
+                    <h3>
+                        My Résumé<br>
+                        <i style="color: #95a1b7; font-size: 1rem">(Needs Updating - Info Not Current)</i>
+                    </h3>
+                    <div class="myResume">
+                        <a href="./file/stephen_mann_resume.pdf" class="targetBlank" target="_blank">Download Formatted PDF Version</a>
+                        <a href="./file/stephen_mann_resume.pdf" class="targetDefault">Download Formatted PDF Version</a>
+                    </div>
+
+                    <div class="resume">
+                        <h3 class="myName">
+                            Stephen A. Mann
+                        </h3>
+                        <div class="resumeInfo">
+                            www.linkedin.com/in/stephenarthurmann
+                            <span class="hide">•</span><span class="show"></span>
+                            Pittsburgh, PA 15224
+                            <span class="hide">•</span><span class="show"></span>
+                            Open my résumé to see more contact info
+                        </div>
+
+                        <hr>
+
+                        <div class="resumeSection">
+                            <h2>
+                                EDUCATION
+                            </h2>
+                            <p>
+                                <span class="hideEducation">
+                                    Bachelor of Science degree in Nuclear Engineering, Minor in Engineering Mechanics
+                                    <br>
+                                    The Pennsylvania State University &ndash; University Park &ndash; Class of 2012
+                                </span>
+                                <span class="showEducation">
+                                    B.S. degree in Nuclear Engineering<br>
+                                    Minor in Engineering Mechanics<br>
+                                    Penn State University &ndash; Class of 2012
+                                </span>
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <div class="resumeSection">
+                            <h2>
+                                EXPERIENCE
+                            </h2>
+                            <p>
+                                <b>Halliburton<span class="hide"> Energy Services, Inc.</span></b><span class="rightText"><b>June 2014 &ndash; May 2019</b></span>
+                                <br>
+                                <i>Field Engineer<span class="hide"> (Technical Professional)</span></i><span class="rightText"><i>Zanesville, OH 43701<span class="hide"> and Homer City, PA 15748</span></i></span>
+                            </p>
+                            <ul>
+                                <li>Identified extensive problems with documentation submitted to customers and informed management of the discovery with a recommended plan of corrective action that was implemented immediately.</li>
+                                <li>Created and led a review team that analyzed the accuracy of all aforementioned documentation and received positive customer reception for the improvements.</li>
+                                <li>Collaborated during continuous improvement events to design the next generation of Halliburton’s main Production Enhancement program with full equipment, inventory, and process integration.</li>
+                                <li>Managed remote server system data and real-time remote operations of ongoing jobs.</li>
+                                <li>Operated as lead engineer for high-profile jobs of experimental technologies and provided detailed analyses on their application, performance, results, and recommendations on modifications for future tests.</li>
+                                <li>Supervised hundreds of jobs throughout the Northeast and ensured operations stayed on schedule and safely met environmental protocols and laws.</li>
+                                <li>Served as the main field liaison between operations personnel and customer representatives to facilitate cooperation and timely and accurate communication.</li>
+                                <li>Utilized CAD programs to create proper equipment placement within tight spaces.</li>
+                                <li>Worked with personnel from various disciplines in preparing innovative technologies, updating procedures, and testing newly-developed chemicals and materials to enhance the output of formations.</li>
+                                <li>Trained new engineers and crew members to efficiently and successfully run jobs on their own with knowledge of all job aspects.</li>
+                                <li>Conducted on-site testing of various materials for quality assurance and any compatibility issues.</li>
+                            </ul>
+                            <p>
+                                <b>Murtech<span class="hide">, Inc.</span></b><span class="rightText"><b>June 2008 &ndash; June 2014</b></span>
+                                <br>
+                                <i>Engineer</i><span class="rightText"><i>Glen Burnie, MD 21061</i></span>
+                            </p>
+                            <ul class="lastList">
+                                <li>Created 3D CAD models and coordinated resources for the company’s new proprietary product line for sea-based desalination utilizing wave energy.</li>
+                                <li>Participated in the development of an environmental monitoring and sampling plan for the foregoing product line in response to requirements from the U.S. Army Corp of Engineers and the state of Maryland.</li>
+                                <li>Modeled and presented a prototype for an enhancement of an existing CBRNE detection product for the Department of Defense (DoD), increasing product capability and durability while reducing field-carry size.</li>
+                                <li>Diagnosed and resolved issues concerning the dry filter unit of a biological and chemical detection device for a DoD contract, reducing peak operating temperatures by over 50% and sound by 12db.</li>
+                                <li>Incorporated 3D CAD modeling into various projects to facilitate the preparation of prototype specifications, designs, and material procurements, as well as guidance for prototype fabrication.</li>
+                                <li>Utilized Microsoft Project to construct project plans, including key milestones, decision points, and budgeting.</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <div class="resumeSection">
+                            <h2>
+                                SKILLS
+                            </h2>
+                            <p>
+                                I am proficient in the use of Rhinoceros 3D CAD, MS Office, G Suite, and Windows products; I have experience with Abaqus and ANSYS finite element analysis tools, AutoCAD, SolidWorks, MATLAB, VBA Editor, and MS Project; and I am currently teaching myself coding in HTML and Python. In August 2020, I began pursuing an Associate Degree in Software Development from the Community College of Allegheny College.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footNote">
+                        <p>
+                            *I have professional references available on request.
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <h3>
+                        Some 3D CAD Work Samples
+                    </h3>
+                    <figure>
+                        <img class="blowerUnit" src="./image/work_related/blower.png" alt="[Blower Unit]">
+                    </figure>
+                    <figcaption>
+                        *This was a blower unit created in Rhino 4.0 and rendered with Flamingo 1.1 raytracing. The parts are exploded to better show their attachment points.
+                    </figcaption>
+                    <br>
+                    <figure>
+                        <img class="facepiece" src="./image/work_related/facepiece.png" alt="[Facepiece]">
+                    </figure>
+                    <figcaption>
+                        *This was a facepiece created in Rhino 4.0 and rendered with Rhino's default renderer in version 6.0 on March 16, 2020. I never fully rendered this back in the day when I had the raytracing plugins, and Rhino's default renderer isn't the greatest. The reason this only shows the facepiece's front and straps is because this was simply a representative model that didn't require the full hood around the head to be modeled at the time. However, I do feel it is a good representation of my first attempt at organic curve modeling back in 2010.
+                    </figcaption>
+                    <br>
+                    <div class="footNote">
+                        <p>
+                            *Please note: There are very few renderings I'm allowed to publicly show due to most of them being designated as company proprietary.
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <h3>
+                        3D CAD High School Models
+                    </h3>
+                    <div class="hyperlink">
+                        <a href="https://www.rhino3d.com/gallery/147/32762" target="_blank">My CAD Model Featured on Rhino 3D's Website</a>
+                    </div>
+                    <br>
+                    <figure>
+                        <img class="CADknife" src="./image/work_related/CAD_knife.jpg" alt="[CAD Knife]">
+                    </figure>
+                    <br>
+                    <p>
+                        I have a couple of models featured in the Student Work portion of the gallery section on Rhino 3D's main website. Above is a link to my favorite one. It's a rendering of a knife that I recreated from a couple of online images. It is also one of the first models I ever created, and I ran into many "blue screens of death" while trying to create the cross-hatch pattern on the handle back in 2008 or 2009. Computers just weren't capable of what they can do these days haha.
+                        <br><br>
+                        Unfortunately, I am unable to find my old flash drive with all of my high school 3D models and animations to update them and put them on here.
+                    </p>
+                </div>
+            </div>
+
+            <!-- HOBBIES TAB CONTENT -->
+            <div id="hobbies" class="tab">
+                <div class="tabContent">
+                    <h3>
+                        Hobbies and Passions
+                    </h3>
+                    <p>
+                        My biggest hobbies and passions outside of work and this website revolve around automobiles and audio systems. I love going to auto shows from time to time, attending car meets, and customizing the vehicles that I own. I also enjoy helping others out with customizing their audio setups.
+                        <br><br>
+                        Navigate the sections below for more info...
+                    </p>
+
+                    <hr>
+
+                    <h3>
+                        My 2015 Chevy SS LSA Install
+                    </h3>
+                    <p>
+                        My build is as follows...
+                    </p>
+                    <ul>
+                        <li>1.9L LSA Supercharger with ZL1 Lid</li>
+                        <li>ARH 2" Long Tube Headers with Cats to Stock Mufflers</li>
+                        <li>Roto-Fab LSA Cold Air Intake</li>
+                        <li>Custom Heat Exchanger Specifically Made for the SS (The first one designed by STG Motorsports)</li>
+                        <li>LS7 MAF</li>
+                        <li>Elite Engineering E2 Catch Can</li>
+                        <li>91 Octane Tune (Would have done 93, but there are a few places I've stopped where 91 is the highest available option)</li>
+                    </ul>
+                    <p>
+                        Results...
+                        <br><br>
+                        <b>480hp/484lb⋅ft</b> at the rear wheels &ndash; so around 535-550hp/tq at the crank! 8.5psi of boost with 10-11 degrees of timing. IATs saw a 56°F increase on a 45-135mph pull.
+                        <br><br>
+                        I wasn't chasing numbers. The goal was more reliable power without affecting driveability. The engine was also not iced down or anything before the dyno run, so this is what I will be seeing in everyday driving. Just driven over, strapped down, and dyno run performed.
+                        <br><br>
+                        Installed by: STG Motorsports
+                        <br>
+                        Tuned by: Tuning by Shane Hinds
+                    </p>
+                    <br>
+                    <figure>
+                        <img class="SSdyno" src="./image/vehicle_related/ss_lsa_dyno_cropped.png" alt="[LSA Dyno Results]">
+                    </figure>
+                    <figcaption>
+                        *Fun fact: Horsepower = Torque × RPM ÷ 5,252 (This is why dyno charts always cross at 5,252 rpm when the lines are on the same scale).
+                    </figcaption>
+                    <br>
+                    <figure>
+                        <img class="LSAinstall" src="./image/vehicle_related/ss_lsa_install_pic.jpg" alt="[LSA Install]">
+                    </figure>
+                    <figcaption>
+                        *A beautiful shot of everything fully installed.
+                    </figcaption>
+                    <br>
+                    <video class="SSdynoVideo" controls>
+                        <source src="./file/SS_dyno_run.mp4" type=video/mp4>
+                    </video>
+                    <figcaption>
+                        *Dyno run being performed at Turbo Connection Racing. Results: 480hp/484lb-ft.
+                    </figcaption>
+                    <br>
+                    <figure>
+                        <img class="SSmeet" src="./image/vehicle_related/ss_car_meet_cropped.jpg" alt="[Car Meet]">
+                    </figure>
+                    <figcaption>
+                        *When your full-size sports sedan ends up looking like an SUV compared to the Lambos and Vettes haha. She actually had quite a few intrigued visitors that day.
+                    </figcaption>
+
+                    <hr>
+
+                    <h3>
+                        2014-2017 Chevy SS Sedan Spreadsheet
+                    </h3>
+                    <div class="hyperlink">
+                        <a href="https://docs.google.com/spreadsheets/d/1vCIAqz21OjMDaHhFNjue-uDv__xqdjoWJIPyc4nFD04/edit?usp=sharing" target="_blank">Chevrolet SS Sedan (1EK69) Spreadsheet</a>
+                    </div>
+                    <br>
+                    <p>
+                        I built and currently maintain the 2014-2017 Chevrolet SS Sedan spreadsheet on the SSforums. This was created back in 2016 to help all members of the SS Sedan community find important information and statistics regarding this vehicle in a single location. It's best if viewed on a computer in Google Chrome or in the Google Sheets app. If viewing on a mobile device or in HTML view, the links and interactive portions don't work properly. Cycle through the tabs on the spreadsheet to go through the vast amounts of information. The spreadsheet contains a lot of data, including:
+                    </p>
+                    <ul>
+                        <li>Production stats and changes for each model year</li>
+                        <li>Monthly sales figures</li>
+                        <li>Order guide changes for each model year</li>
+                        <li>Chevrolet Pressroom releases</li>
+                        <li>An interactive tool that people can enter their build info and get personalized stats</li>
+                        <li>Miscellaneous info that contains the following (and much more):
+                            <ul>
+                                <li>Engine and performance specs</li>
+                                <li>Pricing and warranty info</li>
+                                <li>Wheel and tire specs</li>
+                                <li>Light bulb replacement info</li>
+                                <li>VIN decoding</li>
+                                <li>Recall and technical service bulletin info with links to all related documents</li>
+                                <li>Descriptions for each selectable driver mode</li>
+                                <li>Wheel alignment specs for normal and track applications</li>
+                                <li>Maintenance schedule and serviceable item info</li>
+                                <li>Comparison of similar vehicles</li>
+                                <li>A full breakdown of the GM Holden export programs to the U.S.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <h3>
+                        2011-2017 Chevy Caprice PPV Spreadsheet
+                    </h3>
+                    <div class="hyperlink">
+                        <a href="https://docs.google.com/spreadsheets/d/1K_qcaiIlc6tdv8cmhGAlSmnFAkhESurD3TILrSkVpsM/edit?usp=sharing" target="_blank">Chevrolet Caprice PPV (1EW19) Spreadsheet</a>
+                    </div>
+                    <br>
+                    <p>
+                        I also built and currently maintain the 2011-2017 Chevrolet Caprice PPV spreadsheet on the SSforums. It doesn't contain as much info as the SS sheet&mdash;since the info is harder to come by and I don't own a Caprice PPV&mdash;but I have managed to scrounge up a bit more info than the NewCaprice forum was able to find. For those who don't know, the Caprice PPV is the longer-wheelbase version of the SS, and both car communities are often intertwined.
+                    </p>
+
+                    <hr>
+
+                    <h3>
+                        My 2003 Chevy TrailBlazer Custom Audio System
+                    </h3>
+                    <p>
+                        I researched and put together an entirely new audio system for my 2003 TrailBlazer back in my senior year of college. All of the installation was performed by me with the help of my Dad and his vast set of tools while I was home for a weekend. Unfortunately, I didn't take too many pictures throughout the process because it was freezing cold outside. The following components were installed, and the stock system was completely gutted:
+                    </p>
+                    <ul>
+                        <li>Head Unit: Clarion CX-501</li>
+                        <li>Front Component Speakers: DLS X-SC62</li>
+                        <li>Amp for Component Speakers: Boston Acoustics GTA-502</li>
+                        <li>Subwoofer: Image Dynamics ID10  D2 V.3 (Sealed Enclosure)</li>
+                        <li>Amp for Subwoofer: MTX Thunder500.1</li>
+                    </ul>
+                    <p>
+                        This was my first ever car audio install, and I learned a lot from this project. The DLS speakers sounded fantastic, but they have a relatively low sensitivity, and I underestimated how much wind noise the TrailBlazer generated at highway speeds. I was extremely happy that I included an excessive amount of wiring for the subwoofer to allow me to put the enclosure on the front seat if I ever needed to fold down the rear seats to store stuff. This became quite useful in the four times I moved after installation.
+                    </p>
+                    <br>
+                    <figure>
+                        <img class="TBdismantle" src="./image/vehicle_related/TB_dismantle.jpg" alt="[TB Front Dismantling]">
+                    </figure>
+                    <figcaption>
+                        *After everything was dismantled in the front and before installing the new parts.
+                    </figcaption>
+                    <br>
+                    <figure>
+                        <img class="id10" src="./image/vehicle_related/subwoofer_id10.jpg" alt="[ID10 Sub]">
+                    </figure>
+                    <figcaption>
+                        *Image Dynamics ID10 subwoofer in a custom sealed enclosure. It fit perfectly between two tie-down anchors.
+                    </figcaption>
+                    <br>
+                    <figure>
+                        <img class="dls" src="./image/vehicle_related/DLS_test_fit.jpg" alt="DLS Test Fit">
+                    </figure>
+                    <figcaption>
+                        *DLS speaker test fit before sealing off the rear waves from the front waves in the door panel.
+                    </figcaption>
+                    <br>
+                    <div class="footNote">
+                        <p>
+                            *I really wish I had taken more pictures regarding this install, but it was freezing outside and we wanted to finish as quickly as possible.
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <h3>
+                        My Parent's Home Theater System
+                    </h3>
+                    <p>
+                        I bought my parents a new home theater sound system to go with their new HD TV in 2014. The new HD TV replaced an old rear-projection TV that was older than me at the time whose internal lenses melted and no longer properly combined the RGB colors on screen to make the seamless image. As such, the audio system deserved an upgrade as well.
+                        <br><br>
+                        They were previously utilizing a pair of Bose 901 Series IIIs that my Dad managed to snag from a band who was throwing them out after using them in their concert in the 70s. The issue was that it would have required spending a good deal of money on equipment that could take the outdated 901s and connect them to modern-era TVs. Because of this, I convinced them to upgrade to a modern sound system for around the same price as what it would require doing that, and I offered to pay for the whole thing. It was a "thank you" for letting me live at home and commute to work after college until I paid off my student loan debt and got a new job. The system comprised of the following components:
+                    </p>
+                    <ul>
+                        <li>Receiver: Denon AVR-X2000</li>
+                        <li>LCR Speakers: Ascend Acoustics CMT-340 SE</li>
+                        <li>Subwoofer: SVS SB-1000</li>
+                    </ul>
+                    <p>
+                        Overall, this system came out fantastic! I have nothing but praise for all the components involved, and my parents love it as well. The only thing I would change after-the-fact would be to go with the SVS PB-1000 ported sub instead of the SB-1000 sealed sub due to my parent's living room being completely open to the kitchen, leading to a rather large environment that needs to move a lot of air to hit the extremely low notes with true authority. The PB-1000 is said to reach 10 dB higher than the SB-1000. For those who don't know, that's quite a large jump on the logarithmic scale and will sound around twice as loud at peak volume to the average person!
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- NOTES TAB CONTENT -->
+            <div id="notes" class="tab">
+                <div class="tabContent">
+
+                    <!-- Tab links -->
+                    <div class="browser">
+                        <h3>
+                            Browser Compatibility Tests
+                        </h3>
+
+                        <!--
+                        <aside>
+                            <button onclick="browserShowHide()">Show/Hide Test Designs</button>
+                        </aside>
+                        -->
+
+                        <div class="browserTabs">
+
+                            <div id="browserShowHide" style="display:none">
+                                <p style="font-style:italic;font-size:15px">*The test designs don't have full styling applied. They are for seeing which logo and color-scheme people like most. I've implemented the one I like most as the default.</p>
+                                <br>
+
+                                <!-- Style 1: PSU background color with white icons -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')"><i class="fab fa-chrome"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')"><i class="fab fa-firefox-browser"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')"><i class="fab fa-edge"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'IE')"><i class="fab fa-internet-explorer"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')"><i class="fab fa-opera"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')"><i class="fab fa-safari"></i></button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')"><i class="fab fa-android"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')"><i class="fab fa-apple"></i></button>
+                                </div>
+
+                                <br><br>
+
+                                <!-- Style 2: PSU background color with colored icons -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')" style="background-color:#041e42;color:#fec80e"><i class="fab fa-chrome"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')" style="background-color:#041e42;color:#f16527"><i class="fab fa-firefox-browser"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')" style="background-color:#041e42;color:#00a4b3"><i class="fab fa-edge"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'IE')" style="background-color:#041e42;color:#5fc4ec"><i class="fab fa-internet-explorer"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')" style="background-color:#041e42;color:#f8192b"><i class="fab fa-opera"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')" style="background-color:#041e42;color:#3696f6"><i class="fab fa-safari"></i></button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')" style="background-color:#041e42;color:#a4c639"><i class="fab fa-android"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')" style="background-color:#041e42;color:#a6a6a6"><i class="fab fa-apple"></i></button>
+                                </div>
+
+                                <br><br>
+
+                                <!-- Style 3: Colored backgrounds with white icons -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')" style="background-color:#fec80e"><i class="fab fa-chrome"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')" style="background-color:#f16527"><i class="fab fa-firefox-browser"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')" style="background-color:#00a4b3"><i class="fab fa-edge"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'IE')" style="background-color:#5fc4ec"><i class="fab fa-internet-explorer"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')" style="background-color:#f8192b"><i class="fab fa-opera" style="padding-top:1px"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')" style="background-color:#3696f6"><i class="fab fa-safari"></i></button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')" style="background-color:#a4c639"><i class="fab fa-android"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')" style="background-color:#a6a6a6"><i class="fab fa-apple"></i></button>
+                                </div>
+
+                                <br><br>
+
+                                <!-- Style 4: PSU background color with actual images -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')">
+                                        <img class="icon" src="./image/browser_logo/chrome.png" alt="[Chrome]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')">
+                                        <img class="icon" src="./image/browser_logo/firefox.png" alt="[Firefox]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')">
+                                        <img class="icon" src="./image/browser_logo/edge.png" alt="[Edge]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'IE')">
+                                        <img class="icon" src="./image/browser_logo/ie.png" alt="[IE]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')">
+                                        <img class="icon" src="./image/browser_logo/opera.png" alt="[Opera]">
+                                    </button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')">
+                                        <img class="icon" src="./image/browser_logo/safari.png" alt="[Safari]">
+                                    </button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')">
+                                        <img class="icon" src="./image/browser_logo/android.png" alt="[Android]">
+                                    </button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')">
+                                        <img class="icon" src="./image/browser_logo/apple_gray.png" alt="[Apple]">
+                                    </button>
+                                </div>
+
+                                <br><br>
+
+                                <!-- Style 5: PSU background color with colored icons -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')"><i class="fab fa-google"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')"><i class="fab fa-firefox"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')"><i class="fab fa-microsoft"></i></button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')"><i class="fab fa-opera"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')"><i class="fab fa-apple"></i></button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')"><i class="fab fa-android"></i></button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')"><i class="fab fa-apple"></i></button>
+                                </div>
+
+                                <br><br>
+
+                                <!-- Style 6: PSU background color with colored icons -->
+                                <div id="browserBar" class="browserBar browserHide">
+                                    <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                        Desktop:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Chrome')">
+                                        <img class="icon" src="./image/browser_logo/google.png" alt="[Google]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Firefox')">
+                                        <img class="icon" src="./image/browser_logo/mozilla.png" alt="[Mozilla]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Edge')">
+                                        <img class="icon" src="./image/browser_logo/microsoft.png" alt="[Microsoft]">
+                                    </button>
+                                    <button class="browserLink" onclick="openBrowser(event, 'Opera')">
+                                        <img class="icon" src="./image/browser_logo/opera.png" alt="[Opera]">
+                                    </button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Safari')">
+                                        <img class="icon" src="./image/browser_logo/apple_gray.png" alt="[Apple]">
+                                    </button>
+                                    <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                        Mobile:
+                                    </button>
+                                    <button class="browserLink firstTab" onclick="openBrowser(event, 'Android')">
+                                        <img class="icon" src="./image/browser_logo/android.png" alt="[Android]">
+                                    </button>
+                                    <button class="browserLink lastTab" onclick="openBrowser(event, 'Apple')">
+                                        <img class="icon" src="./image/browser_logo/apple_gray.png" alt="[Apple]">
+                                    </button>
+                                </div>
+
+                                <br><br>
+
+                            </div>
+
+                            <!-- Style 7: Dark colored backgrounds with actual images -->
+                            <div id="browserBar" class="browserBar">
+                                <button class="browserLink browserInfo firstTab lastTab" onclick="openBrowser(event, 'Info')" id="browserDefault">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button class="browserDesktop" onclick="openBrowser(event, 'Description')" disabled>
+                                    Desktop:
+                                </button>
+                                <button class="browserLink browserChrome firstTab" onclick="openBrowser(event, 'Chrome')">
+                                    <img class="icon" src="./image/browser_logo/chrome.png" alt="[Chrome]">
+                                </button>
+                                <button class="browserLink browserFirefox" onclick="openBrowser(event, 'Firefox')">
+                                    <img class="icon" src="./image/browser_logo/firefox.png" alt="[Firefox]">
+                                </button>
+                                <button class="browserLink browserEdge" onclick="openBrowser(event, 'Edge')">
+                                    <img class="icon" src="./image/browser_logo/edge.png" alt="[Edge]">
+                                </button>
+                                <button class="browserLink browserIE" onclick="openBrowser(event, 'IE')">
+                                    <img class="icon" src="./image/browser_logo/ie.png" alt="[IE]">
+                                </button>
+                                <button class="browserLink browserOpera" onclick="openBrowser(event, 'Opera')">
+                                    <img class="icon" src="./image/browser_logo/opera.png" alt="[Opera]">
+                                </button>
+                                <button class="browserLink browserSafari lastTab" onclick="openBrowser(event, 'Safari')">
+                                    <img class="icon" src="./image/browser_logo/safari.png" alt="[Safari]">
+                                </button>
+                                <button class="browserMobile" onclick="openBrowser(event, 'Description')" disabled>
+                                    Mobile:
+                                </button>
+                                <button class="browserLink browserAndroid firstTab" onclick="openBrowser(event, 'Android')">
+                                    <img class="icon" src="./image/browser_logo/android.png" alt="[Android]">
+                                </button>
+                                <button class="browserLink browserApple lastTab" onclick="openBrowser(event, 'Apple')">
+                                    <img class="icon" src="./image/browser_logo/apple_gray.png" alt="[Apple]">
+                                </button>
+                            </div>
+
+                            <!-- Tab content -->
+                            <div id="Info" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/compatibility.png" alt="[Compatibility]"><span>&ensp;Latest Compatibility Tests: 2021-01-07</span></p>
+                                <ul>
+                                    <li>Click on the browser tabs above to see any current compatibility issues with the most popular browsers</li>
+                                </ul>
+                            </div>
+                            <div id="Chrome" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/chrome.png" alt="[Chrome]"><span>&ensp;Google Chrome 87</span></p>
+                                <ul>
+                                    <li>No issues from what I can see</li>
+                                </ul>
+                                <!-- <p><img class="icon" src="./image/browser_logo/chromium.png" alt="[Chromium]"><span>&ensp;Chromium-Based Browsers</span></p>
+                                <ul>
+                                    <li>This website should function similarly to Chrome on any Chromium-based browser (Microsoft Edge, Opera, Yandex, Samsung Internet, Amazon Silk, etc.)</li>
+                                </ul>
+                                -->
+                            </div>
+                            <div id="Firefox" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/firefox.png" alt="[Firefox]"><span>&ensp;Mozilla Firefox 84</span></p>
+                                <ul>
+                                    <li>Google Fonts seem to cause the padding of the red hover animation on the tabs to be off in Firefox, despite being correct in Chromium-based browsers</li>
+                                </ul>
+                                <!-- <p><img class="icon" src="./image/browser_logo/seamonkey.png" alt="[SeaMonkey]"><span>&ensp;Mozilla SeaMonkey 2.53</span></p>
+                                <ul>
+                                    <li>Browser compatibility tabs are not connected to this content section</li>
+                                    <li>I tested this website on Mozilla's SeaMonkey to see how an open-sourced browser based on Netscape Communicator's old design would function. I don't plan on testing this browser further as it's not widely popular.</li>
+                                </ul>
+                                -->
+                            </div>
+                            <div id="Edge" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/edge.png" alt="[Edge New]"><span>&ensp;Microsoft Edge 87</span></p>
+                                <ul>
+                                    <li>No issues from what I can see</li>
+                                </ul>
+                                <p><img class="icon" src="./image/browser_logo/edge_old.png" alt="[Edge 44]"><span>&ensp;Microsoft Edge 44 (Legacy)</span></p>
+                                <ul>
+                                    <li>EdgeHTML versions of Edge don't support dropdown details, so Notes tab changelogs are fully displayed at all times</li>
+                                </ul>
+                            </div>
+                            <div id="IE" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/ie.png" alt="[IE]"><span>&ensp;Microsoft Internet Explorer 11</span></p>
+                                <ul>
+                                    <li>IE11 doesn't support dropdown details, so Notes tab changelogs are fully displayed at all times</li>
+                                    <li>Google Fonts seem to cause the padding of the red hover animation on the tabs to be off in IE11, despite being correct in Chromium-based browsers</li>
+                                </ul>
+                            </div>
+                            <div id="Opera" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/opera.png" alt="[Opera]"><span>&ensp;Opera 73</span></p>
+                                <ul>
+                                    <li>No issues from what I can see</li>
+                                </ul>
+                            </div>
+                            <div id="Safari" class="browserContent">
+                                <p><i>*I have no way of verifying things on macOS myself</i></p><br>
+                                <p><img class="icon" src="./image/browser_logo/safari.png" alt="[Safari]"><span>&ensp;Safari 13</span></p>
+                                <ul>
+                                    <li>My friend tested this website on his MAC - Google Fonts seem to cause the padding of the red hover animation on the tabs to be off in Safari, despite being correct in Chromium-based browsers</li>
+                                </ul>
+                            </div>
+                            <div id="Android" class="browserContent">
+                                <p><img class="icon" src="./image/browser_logo/chrome.png" alt="[Chrome]"><span>&ensp;Chrome 87 App</span></p>
+                                <ul>
+                                    <li>Mobile Site Setting: No issues from what I can see</li>
+                                    <li>Desktop Site Setting: Odd text, spacing, and layout scaling issues</li>
+                                </ul>
+                                <p><img class="icon" src="./image/browser_logo/samsung.png" alt="[Samsung]"><span>&ensp;Samsung Internet 13 App</span></p>
+                                <ul>
+                                    <li>Mobile Version Setting: No issues from what I can see</li>
+                                    <li>Desktop Version Setting: Odd text, spacing, and layout scaling issues</li>
+                                </ul>
+                                <!-- <p><img class="icon" src="./image/browser_logo/uc.png" alt="[UC Browser]"><span>&ensp;UC Browser 13 App</span></p>
+                                <ul>
+                                    <li>No issues from what I can see</li>
+                                    <li>I tested this website on UC Browser for Android and everything worked without issues. While it's a fairly popular browser in Asian markets, I don't plan on testing this browser further as Google Chrome is by far the most popular overall for Android.</li>
+                                </ul>
+                                -->
+                            </div>
+                            <div id="Apple" class="browserContent">
+                                <p><i>*I have no way of verifying things on iOS myself</i></p><br>
+                                <p><img class="icon" src="./image/browser_logo/safari.png" alt="[Safari]"><span>&ensp;Safari 13 App</span></p>
+                                <ul>
+                                    <li>My friend tested this website on his iPhone and said it was good</li>
+                                </ul>
+                                <p><img class="icon" src="./image/browser_logo/chrome.png" alt="[Chrome]"><span>&ensp;Chrome 80 App</span></p>
+                                <ul>
+                                    <li>Still need to test</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <h3 class="changelog">
+                        Website <a href="./previous_version/archived_websites.html" target="_blank">Version</a> Changelogs
+                    </h3>
+
+                    <!-- Version A Changelog Dropdown -->
+                    <details>
+                        <summary>
+                            smann.A Changelog
+                        </summary>
+                        <div class="codeName">
+                            Code Name: <span class="tooltip">Abumi-guchi
+                                <span class="tooltipText">
+                                    The Abumi-guchi is a strange, furry-looking yôkai from Japanese folklore with a stirrup for a mouth and stirrup straps for arms. It is the tsukumogami form (a tool that has acquired a spirit) of a stirrup that once belonged to a soldier who fell during battle. It is said that the Abumi-guchi will wait where it lies for the fallen soldier to return.
+                                </span>
+                            </span>
+                            <p>
+                                Version Active: March 5, 2020 &ndash; March 20, 2020
+                            </p>
+                        </div>
+                        <div class="changelogList">
+                            <ul>
+                                <li>2020-03-05
+                                    <ul>
+                                        <li>Began designing initial website</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-06
+                                    <ul>
+                                        <li>Updated with tab-style browsing</li>
+                                        <li>Filled out color schemes</li>
+                                        <li>Added info to Home tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-07
+                                    <ul>
+                                        <li>Updated tab layout to a modern look with no borders and solid colors</li>
+                                        <li>Started adding descriptions to each tab</li>
+                                        <li>Verified compatibility with multiple browsers and Android</li>
+                                        <li>Added script to check whether viewing on desktop or mobile (Doesn't actually do anything yet)</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-09
+                                    <ul>
+                                        <li>Updated to a vertical tab layout on the side</li>
+                                        <li>Swapped to Penn State official color scheme
+                                            <ul>
+                                                <li>Dark blue: Pantone 282</li>
+                                                <li>White</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-10
+                                    <ul>
+                                        <li>Added info to Career tab</li>
+                                        <li>Added icons and images to navigation bar</li>
+                                        <li>Diagnosed some issues with browser compatibility
+                                            <ul>
+                                                <li>I think many of these issues are because I'm opening the file locally and don't have the hosted website fully setup for online access</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-11
+                                    <ul>
+                                        <li>Incorporated buttons for changing tab layouts and remembering the layouts through a cookie</li>
+                                        <li>Corrected Career tab layout by rewriting some code that had issues</li>
+                                        <li>Corrected some container issues where sometimes the smann logo was wider than the rest of the bar on vertical tab layout</li>
+                                        <li>Added info to Hobbies tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-12
+                                    <ul>
+                                        <li>Added info to Profile and Education tabs</li>
+                                        <li>Added "TrailBlazer Custom Audio System" to Hobbies tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-13
+                                    <ul>
+                                        <li>Website now fully hosted for online access!</li>
+                                        <li>Fixed quite a few compatibility issues now that I can view online and not just locally</li>
+                                        <li>Added "Parent's Home Theater System" to Hobbies tab</li>
+                                        <li>Created new icons and logos</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-14
+                                    <ul>
+                                        <li>Added "My 2015 Chevy SS LSA Install" to Hobbies tab</li>
+                                        <li>Added LinkedIn hyperlink icon in container</li>
+                                        <li>Renamed navigation classes to what they actually represent</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-15
+                                    <ul>
+                                        <li>Changed highlighted tab color from gold to gray/blue to get away from the gold and Penn State dark blue looking like Michigan's color scheme (Yuck haha)</li>
+                                        <li>Added email hyperlink icon in container</li>
+                                        <li>Added professional references to Career tab</li>
+                                        <li>Fully integrated Education tab into Profile tab</li>
+                                        <li>Updated skills on Profile tab</li>
+                                        <li>Redesigned Notes tab since it was a complete eye-sore before</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-16
+                                    <ul>
+                                        <li>Updated Hobbies tab to have dropdowns for each section</li>
+                                        <li>Fixed some compatibility issues</li>
+                                        <li>Created a new design theme, but scrapped it since it didn't come out like I thought it would</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-17
+                                    <ul>
+                                        <li>Fixed smann logo and links going over Notes tab before disappearing on vertical tab layout</li>
+                                        <li>Updated navigation tab visualizations</li>
+                                        <li>Added 3D CAD work samples to Career tab</li>
+                                        <li>Got rid of dropdown menus on Hobbies tab after remembering that IE11 and Edge don't display them correctly and they came out hideous on those browsers</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-18
+                                    <ul>
+                                        <li>Figured out issue with one stylesheet link overriding another stylesheet; ended up using @import and now they both work</li>
+                                        <li>Updated some content</li>
+                                        <li>Added some metadata</li>
+                                        <li>Cleaned up some coding</li>
+                                        <li>Integrated tab layout change buttons into navigation bar</li>
+                                        <li>Added a welcoming pic to the Home tab</li>
+                                        <li>Resized pictures for better display online</li>
+                                        <li>Removed résumé iframe that was constantly glitchy and replaced with an image résumé on the Career tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-19
+                                    <ul>
+                                        <li>Added an About Me to the Profile tab; currently hidden until I finish it</li>
+                                        <li>Created an overall stylesheet to pull out a lot of inline styling from the HTML file</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-20
+                                    <ul>
+                                        <li>Redesigned Career and Notes tabs for better visualization</li>
+                                        <li>Set initial-scale in metadata to 0.62 for proper scaling on mobile browsers (Something isn't correct, this should scale properly at a value of 1)</li>
+                                        <li>Added a bunch of @media styles to change layouts and text when the page is resized too small</li>
+                                        <li>Redesigned the Home tab for better visualization</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Version B Changelog Dropdown -->
+                    <details>
+                        <summary>
+                            smann.B Changelog
+                        </summary>
+                        <div class="codeName">
+                            Code Name: <span class="tooltip">Bakezōri
+                                <span class="tooltipText">
+                                    The Bakezōri is a hilarious mythical creature. Japanese folklore describes it as a wandering sandal with two arms and two legs, but only one eye. It's said to spook inhabited households during the night by running around and continuously chanting. Yes, you read that correctly. It is an animated sandal that runs around screaming at people.
+                                </span>
+                            </span>
+                            <p>
+                                Version Active: March 21, 2020 &ndash; Present
+                            </p>
+                        </div>
+                        <div class="changelogList">
+                            <ul>
+                                <li>2020-03-21
+                                    <ul>
+                                        <li>Began complete website overhaul with better visualization, working mobile version, and pulling out all inline styling in the HTML</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-22
+                                    <ul>
+                                        <li>Tested multiple setups and designs to find which I liked the most (I have a good idea, but still deciding)</li>
+                                        <li>Brought over Home (still a WIP), Hobbies, and Notes tab info</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-23
+                                    <ul>
+                                        <li>Brought over Career info</li>
+                                        <li>Fixed a bunch of issues with the layout and formatting so things properly display on both desktop and mobile devices</li>
+                                        <li>Brought over LinkedIn and email icon links in navigation bar</li>
+                                        <li>Re-stylized every tab to work with both desktop, mobile, and in-between versions</li>
+                                        <li>Fixed a few major persistent issues with coding and cleaned up a few elements</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-24
+                                    <ul>
+                                        <li>Brought over Profile tab info</li>
+                                        <li>Finalized mobile version compatibility and fixed all issues that I could see</li>
+                                        <li>Fixed the issue with the Notes tab's display tags randomly causing overflow on smaller devices</li>
+                                        <li>Swapped this version over to being the main version of my website</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-25
+                                    <ul>
+                                        <li>Began handing out website URL on job applications</li>
+                                        <li>Added a Biography section to the Profile tab</li>
+                                        <li>Added a "Major recent changes..." section to the Home tab</li>
+                                        <li>Removed all unnecessary coding and consolidated existing coding on HTML and CSS</li>
+                                        <li>Swapped to Segoe UI as being the main font on larger displays with Arimo on smaller displays</li>
+                                        <li>Stylized the text on the Home and Profile tabs to coincide with the styling of the Career tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-26
+                                    <ul>
+                                        <li>Designed a new smann logo that resembles an oscillating wave for the MANN part</li>
+                                        <li>Updated to a sleeker design for smaller screens</li>
+                                        <li>Fixed some margin issues with figure captions</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-27
+                                    <ul>
+                                        <li>Went through line-by-line in my CSS to put styling in a common order that would make future changes easier</li>
+                                        <li>Minor modifications to HTML and layout</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-28
+                                    <ul>
+                                        <li>Fixed top navigation bar so it always shows</li>
+                                        <li>Changed scrollbar to only be in the content area</li>
+                                        <li>Restyled scrollbar on webkit browsers (Chrome, Opera, Edge, Safari)</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-29
+                                    <ul>
+                                        <li>Changed styling to prevent content shifting when vertical scrollbar shows/hides</li>
+                                        <li>Put website in Featured section of LinkedIn page</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-30
+                                    <ul>
+                                        <li>Ran latest compatibility tests for browsers</li>
+                                        <li>Updated look with a background color on larger displays</li>
+                                    </ul>
+                                </li>
+                                <li>2020-03-31
+                                    <ul>
+                                        <li>Added descriptive menu button for browser compatibility tests</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-01
+                                    <ul>
+                                        <li>Got a wicked awesome tattoo of Steve Buscemi on my chest</li>
+                                        <li>Watched the greatest movie ever, Gigli</li>
+                                        <li>Tamed a nasty-tempered, fire-breathing, 30-foot-tall hamster with Wonder Woman's lasso</li>
+                                        <li>Went to the store and was the only person who didn't buy six 12-packs of toilet paper</li>
+                                        <li>April Fools!</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-02
+                                    <ul>
+                                        <li>Added footer with quick links</li>
+                                        <li>Removed webkit scrollbar style to get back to the default style</li>
+                                        <li>Restyled Career tab so the professional experiences and references showed up better on mobile displays</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-03
+                                    <ul>
+                                        <li>Added and tested some more browsers in the Compatibility section of the Notes tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-04
+                                    <ul>
+                                        <li>Replaced my image résumé with a text résumé on the Careers tab so it wouldn't scale too small on smaller displays, making it unreadable</li>
+                                        <li>Changed some colors up</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-05
+                                    <ul>
+                                        <li>Added footer elements to mobile versions</li>
+                                        <li>Changed mobile version styling</li>
+                                        <li>Updated font-families</li>
+                                        <li>Cleaned up a lot of CSS coding that was unnecessary after changing things around</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-06
+                                    <ul>
+                                        <li>Removed LinkedIn and email links in the navigation bar since they are now in the footer below the tab's content</li>
+                                        <li>Combined some @media events in the CSS coding to simplify changes</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-07
+                                    <ul>
+                                        <li>Rewrote the text on the Home and Profile tabs</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-09
+                                    <ul>
+                                        <li>Updated PDF résumé to newest version</li>
+                                        <li>Updated professional references</li>
+                                        <li>Updated Hobbies tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-14
+                                    <ul>
+                                        <li>Updated to using Open Sans as the default text for everything with Montserrat used in the navigation bar and footer</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-15
+                                    <ul>
+                                        <li>Added links to the websites of companies I've worked for by clicking on the company logo on the Career tab</li>
+                                        <li>Cleaned up some excess coding that no longer applies and made minor changes to some text</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-16
+                                    <ul>
+                                        <li>Added a simple opening animation splash screen on page load/refresh</li>
+                                        <li>Added Open Graph Protocol metadata for when this website is shared anywhere</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-17
+                                    <ul>
+                                        <li>Added quick links in navigation bar and centered tabs to help with massive displays</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-18
+                                    <ul>
+                                        <li>Added a modal that opens for the user to choose between my stylized or plain text résumé</li>
+                                        <li>Replaced plain text résumé file</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-21
+                                    <ul>
+                                        <li>Added my SS dyno run video to the Hobbies tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-04-29
+                                    <ul>
+                                        <li>Updated biography on Profile tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-05-10
+                                    <ul>
+                                        <li>Began consulting my friend on updating his website with my overall design</li>
+                                        <li>Updated various text throughout</li>
+                                        <li>Cleaned up some CSS and HTML coding</li>
+                                    </ul>
+                                </li>
+                                <li>2020-05-13
+                                    <ul>
+                                        <li>Updated References section on Career tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-05-30
+                                    <ul>
+                                        <li>Added 3D CAD models from high school that are featured on Rhino's website on the Career tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-07-03
+                                    <ul>
+                                        <li>Added my Associate Degree to my Profile page and removed all contact info to protect against web crawlers</li>
+                                    </ul>
+                                </li>
+                                <li>2020-11-18
+                                    <ul>
+                                        <li>Added Sensia work info on Career tab</li>
+                                    </ul>
+                                </li>
+                                <li>2020-11-26
+                                    <ul>
+                                        <li>Added Education section on Profile tab</li>
+                                        <li>Updated JavaScript coding, naming conventions, and date calculations</li>
+                                    </ul>
+                                </li>
+                                <li>2020-11-28
+                                    <ul>
+                                        <li>Added JavaScript and input boxes that automatically calculate number of years and months on Profile and Career tabs and automatically resize to the values</li>
+                                    </ul>
+                                </li>
+                                <li>2021-01-07
+                                    <ul>
+                                        <li>Cleaned up some coding and made some small adjustments</li>
+                                    </ul>
+                                </li>
+                                <li>2021-02-16
+                                    <ul>
+                                        <li>Updated JavaScript times for opening Navigation and Container to allow more upfront font/styling loading</li>
+                                        <li>Removed References section on Career tab
+                                            <ul>
+                                                <li>This was done for privacy reasons, and people can always request these anyways</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>2021-02-18
+                                    <ul>
+                                        <li>Added Courses section to Profile tab</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Version C Changelog Dropdown -->
+                    <!--
+                    <details>
+                        <summary>
+                            smann.C Changelog
+                        </summary>
+                        <div class="codeName">
+                            Code Name: <span class="tooltip">Chōchin-bake
+                                <span class="tooltipText">Japanese folklore states that when a paper lantern, or a chōchin, reaches an advanced age, it sometimes becomes a Chōchin-obake. The paper splits along one of its wooden ribs, forming a gaping mouth with a wild, lolling tongue. One or two eyes pop out of the upper half of the lantern, and occasionally arms or legs may sprout from its body as well.</span>
+                            </span>
+                        </div>
+                        <ul>
+                            <li>2021-03-30 (Date example)
+                                <ul>
+                                    <li>List items</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                    -->
+
+                </div>
+            </div>
+
+            <!-- FOOTER PORTION -->
+            <footer class="infoFooter">
+                <div>
+                    <h1>S<span>tephen</span> M<span>ann</span></h1>
+                    <h2>s<span>mann</span></h2>
+                </div>
+                <div>
+                    <div class="modalButton">
+                        <button id="modalButtonFooter" title="My Résumé"><i class="fas fa-file-pdf"></i><span> Résumé</span></button>
+                    </div>
+                    <a href="https://www.linkedin.com/in/stephenarthurmann" target="_blank" title="My LinkedIn Profile"><i class="fab fa-linkedin"></i><span> LinkedIn</span></a>
+                    <a href="mailto:smann.psu@gmail.com" target="_blank" title="My Email&#10;&#10;Right-click and select 'Copy email address' or 'Copy shortcut' if you wish to copy the email address to your clipboard."><i class="fas fa-envelope"></i><span> Email</span></a>
+                </div>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>
