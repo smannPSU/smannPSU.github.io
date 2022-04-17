@@ -1,0 +1,1832 @@
+
+/* Reset default HTML settings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	3% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeOut {
+	0% { opacity: 1; z-index: 10; }
+	100% { opacity: 0; z-index: -1; }
+}
+@keyframes slideDown {
+	0% { margin-top: -40px; }
+	3% { margin-top: -40px; }
+	100% { margin-top: 40px; }
+}
+@keyframes slideRight {
+	0% { margin-right: 45px; }
+	3% { margin-right: 45px; }
+  	100% { margin-right: 0px; }
+}
+@keyframes slideLeft {
+	0% { margin-left: 45px; }
+	3% { margin-left: 45px; }
+  	100% { margin-left: 0px; }
+}
+@keyframes animateTop {
+	0% { top: -300px; opacity: 0 }
+	25% { top: -25px; opacity: 0 }
+  	100% { top: 0; opacity: 1 }
+}
+
+/* Set the standards for the whole document */
+html {
+	background: #95a1b7;
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Arimo, Arial, sans-serif;
+	font-size: 15px;
+}
+
+/* Set the area for all the content */
+body {
+	height: 100%;
+	width: 100%;
+	min-width: 320px;
+	margin: 0 auto;
+	background-color: #95a1b7;
+	/* background-image: url("./image/background.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center; */
+	/* background-image: linear-gradient(#041e42, white); */
+}
+
+/* Style a splash screen */
+.splashScreen {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #95a1b7;
+	font-size: 90px;
+}
+.splashText {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-flex;
+	width: 100%;
+	pointer-events: none;
+	justify-content: center;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Arimo, Arial, sans-serif;
+}
+.splashText .firstLetter {
+	position: relative; /* Required for IE11 fading */
+	display: flex;
+	color: #041e42;
+}
+.splashText .lastName {
+	position: relative;  /* Required for IE11 fading */
+	display: flex;
+	color: white;
+}
+
+/* Create animation for the splash screen */
+.splashText {
+	animation:
+	fadeIn 0.75s ease-in 0s 1 forwards,
+	fadeOut 0.5s ease-out 1.5s 1 forwards;
+	will-change: auto;
+}
+.splashText .firstLetter {
+	animation:
+		slideRight 2s linear 0s 1 forwards;
+	will-change: auto;
+}
+.splashText .lastName {
+	animation:
+		slideLeft 2s linear 0s 1 forwards;
+	will-change: auto;
+}
+.splashScreen {
+	animation: fadeOut 0.25s ease-in-out 2s 1 forwards;
+}
+
+/* Style the overall navigation bar */
+nav {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: none; /* For initial splash screen */
+	overflow: hidden;
+	height: 60px;
+	width: 100vw;
+	box-shadow: 0 0 7px #041e42;
+	background-color: #041e42;
+	justify-content: space-between;
+	font-size: 1rem;
+	/* background-color: transparent; */
+}
+
+nav div {
+	display: inline-flex;
+	align-items: center;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Arimo, Arial, sans-serif;
+	font-weight: 500;
+}
+
+/* Style the text smann logo */
+nav .smannLogo a {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-55%); /* Used to center text vertically since there aren't any tall lowercase letters */
+	/* animation: fadeIn 0.2s ease-in 0s 1 forwards; */
+	margin-left: 1.25rem;
+	padding: 0;
+	pointer-events: none;
+  	font-size: 1.75rem;
+	font-weight: normal;
+	letter-spacing: 1px;
+	color: white;
+}
+/* Make the "s" in text smann logo a different color */
+nav .smannLogo a span {
+	font-weight: 500;
+  	color: red;
+}
+
+/* Style the actual tabs */
+nav a {
+	position: relative;
+	margin: 0;
+	padding: 0.95rem 0.75rem;
+	text-decoration: none;
+	letter-spacing: 1px;
+  	color: white;
+}
+
+/* Make the tabs display in a row */
+nav ul {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-flex;
+	height: 60px;
+	margin-left: 8.75rem;
+	align-items: center;
+}
+
+/* Remove bullets from tabs and style them */
+nav ul li {
+	margin: 0 0.2rem;
+	padding: 0.5rem 0;
+	list-style: none;
+}
+
+/* Create animation for each tab
+nav ul li:nth-child(1) {
+	animation: fadeIn 0.2s ease-in 0s 1 forwards;
+}
+nav ul li:nth-child(2) {
+	animation: fadeIn 0.4s ease-in 0s 1 forwards;
+}
+nav ul li:nth-child(3) {
+	animation: fadeIn 0.6s ease-in 0s 1 forwards;
+}
+nav ul li:nth-child(4) {
+	animation: fadeIn 0.8s ease-in 0s 1 forwards;
+}
+nav ul li:nth-child(5) {
+	animation: fadeIn 1.0s ease-in 0s 1 forwards;
+}
+*/
+
+/* Style the lines that appears when hovering */
+nav ul li a::before,
+nav ul li a::after {
+	content: '';
+	position: absolute;
+  	left: 0;
+	transform: scaleX(0);
+	transition: all 0.35s;
+	width: 100%;
+	height: 2px;
+	background-color: red;
+}
+/* Line comes in from left on the top */
+nav ul li a::before {
+	top: 0;
+	transform-origin: left;
+}
+/* Line comes in from right on the bottom */
+nav ul li a::after {
+	bottom: 0;
+	transform-origin: right;
+}
+/* Style for having lines show up on hover */
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+	transform: scaleX(1);
+}
+
+/* Tab active state */
+.active {
+  	display: block !important; /* !important is needed for the initial tab to show up on refresh */
+}
+.active a {
+  	color: #041e42;
+}
+body .tabsList li.active {
+	border-radius: 0.75rem;
+  	background-color: white;
+}
+
+nav .tabLinks {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+nav .tabLinks a {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-flex;
+	height: 60px;
+	margin: 0;
+	padding: 0.625rem;
+	align-items: center;
+}
+nav .tabLinks a:last-child {
+	margin-right: 1rem;
+}
+nav .tabLinks i {
+	font-size: 1.25rem;
+}
+
+.modalButton {
+	position: relative;
+	float: right;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 60px;
+	margin: 0;
+	align-items: center;
+	cursor: pointer;
+}
+.modalButton button {
+	position: relative;
+	height: 60px;
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	padding: 0.625rem;
+	background-color: transparent;
+  	color: white;
+}
+
+	/* The Modal (background) */
+.modal {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	overflow: auto;
+	margin: 0;
+}
+
+/* Modal Content */
+.modalContent {
+  	position: relative;
+	width: 90%;
+	max-width: 400px;
+	display: block;
+  	margin: 0 auto;
+	margin-top: 80px;
+ 	padding: 0;
+  	box-shadow: 0 0 5px #041e42, 0 0 2px white;
+	background-color: white;
+  	animation-name: animateTop;
+  	animation-duration: 0.5s;
+}
+body .modal {
+	align-items: baseline;
+}
+
+/* The Close Button */
+.closeModal {
+  	float: right;
+	height: 50px;
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 2rem;
+}
+.closeModal:hover,
+.closeModal:focus {
+	text-decoration: none;
+	cursor: pointer;
+	color: #95a1b7;
+}
+
+.modalHeader {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	padding: 1rem;
+	background-color: #041e42;
+	color: white;
+	font-size: 0.9rem;
+}
+
+.modalBody {
+	display: block;
+}
+.modalBody a {
+	text-decoration: none;
+	color: #041e42;
+}
+.modalBody a:hover {
+	background-color: #95a1b7;
+	color: white;
+}
+
+.modalBody a.targetDefault {
+	display: none;
+}
+
+body .modalBody a {
+	transform: none;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 1rem;
+}
+
+.modalFooter {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	padding: 1rem;
+	background-color: #041e42;
+	color: white;
+	font-size: 0.9rem;
+}
+
+.modalHeader h3,
+.modalFooter h3 {
+	pointer-events: none;
+	font-weight: normal;
+}
+
+/* Style the entire area under the navigation bar */
+body .container {
+	display: none;
+	overflow-x: hidden;
+	overflow-y: auto; /* This puts the scrollbar under the fixed header */
+	height: calc(100vh - 60px);
+	margin-top: 60px;
+}
+
+/* Style the tabs' content and make it so the navigation bar is 100% width, but the contents can be a different width */
+body .tab {
+	clear: both;
+	display: none;
+	width: 100%;
+	background-color: #95a1b7;
+}
+body .tabContent {
+	width: 1600px;
+	margin: 0 calc(100vw / 2 - 1600px / 2); /* This is used to stop the shifting when the scrollbar appears; Change to auto to go back to the defalut */
+	padding: 1rem 1.25rem;
+	border-bottom-left-radius: 1.25rem;
+	border-bottom-right-radius: 1.25rem;
+	box-shadow: 0 0 7px #041e42;
+	background-color: white;
+}
+
+/* Style the footer info */
+.infoFooter {
+	display: flex;
+	height: 60px;
+	width: 1600px;
+	margin: 0 calc(100vw / 2 - 1600px / 2); /* This is used to stop the shifting when the scrollbar appears; Change to auto to go back to the defalut */
+	padding: 0 2rem;
+	justify-content: space-between;
+	background-color: transparent;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Arimo, Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.infoFooter div {
+	display: inline-flex;
+	align-items: center;
+	margin-right: -0.5rem;
+}
+.infoFooter div .modalButton {
+	pointer-events: none;
+}
+.infoFooter div .modalButton button {
+	pointer-events: auto;
+	margin-right: 0.5rem;
+	padding: 0;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Arimo, Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.infoFooter div .modalButton button i {
+	margin-right: 0.5rem;
+}
+.infoFooter h1 {
+	pointer-events: none;
+	color: #041e42;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+.infoFooter h1 span {
+	color: white;
+	font-weight: normal;
+}
+.infoFooter h2 {
+	display: none;
+}
+.infoFooter a,
+.infoFooter div .modalButton button {
+	height: auto;
+	margin-left: 1rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	color: white;
+	font-size: 1.25rem;
+}
+.infoFooter i {
+	color: #041e42;
+}
+
+/* Style the horizontal line */
+hr {
+	margin: 1rem auto;
+}
+
+/* Style the normal lists back to having a left margin */
+body .tab ul li {
+	margin-left: 1rem;
+}
+
+/* Style the h3 headings */
+body .tab h3 {
+  	margin-bottom: 0.75rem;
+	text-align: center;
+}
+
+/* Style the footNote class */
+.footNote {
+	margin-top: 0.5rem;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+}
+
+/* Style the captions under images */
+figcaption {
+	text-align: center;
+	font-style: italic;
+	margin-top: 0.25rem;
+	margin-bottom: 0;
+}
+
+
+
+/* Style the Home tab elements */
+
+	/* Style the welcoming pic on the Home tab */
+	#home .welcomePic {
+		display: block;
+		max-width: 700px;
+		width: 100%;
+		height: auto;
+		margin: 1rem auto;
+		border-radius: 2rem;
+		box-shadow: 0 0 3px #041e42;
+	}
+
+	/* Style the text at the bottom of the Home tab */
+	#home .textBottom {
+		display: table;
+		width: 1600px;
+		margin: 0 -1.25rem;
+		margin-bottom: -1rem;
+	}
+	#home .textRecent,
+	#home .textUpdate {
+		display: table-cell;
+		width: 50%;
+		background-color: #d9d9d9;
+	}
+	#home .textRecent {
+		border-bottom-left-radius: 1.25rem;
+	}
+	#home .textUpdate {
+		border-bottom-right-radius: 1.25rem;
+	}
+	#home .textRecent p,
+	#home .textUpdate p {
+		padding: 0.5rem;
+		background-color: #041e42;
+		color: white;
+		text-align: center;
+	}
+	#home .textRecent ul,
+	#home .textUpdate ul {
+		padding: 0.75rem 1rem;
+	}
+	#home .textSpacer {
+		width: 1px;
+	}
+
+	/* Give the lists the same padding as the text */
+	#home ul {
+		padding: 0 1rem;
+	}
+
+
+
+/* Style the Profile tab elements */
+
+	/* Style the time input */
+	#profile .textBiography input {
+		display: inline;
+		border: none;
+		padding: none;
+		background-color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+	}
+
+	/* Style the overall table on the Profile tab */
+	#profile .profileTable {
+		text-align: center;
+	}
+	#profile .profileTable th {
+		font-weight: normal;
+	}
+	#profile .profileTable i {
+		vertical-align: middle;
+		font-size: 1.25rem;
+	}
+	#profile .profileTable img {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		max-height: 440px;
+		width: auto;
+		margin: 0 -0.3rem;
+		/* box-shadow: 0 0 3px #041e42; */
+	}
+
+	/* Style the left and right tables next to the pic */
+	#profile .aboutMe,
+	#profile .skills {
+		display: inline-block;
+		border-collapse: collapse;
+	}
+	#profile .aboutMe tr,
+	#profile .skills tr {
+		height: 40px;
+	}
+
+	/* Style the different types of rows */
+	#profile .rowTop {
+		background-color: #041e42;
+		color: white;
+	}
+	#profile .rowOdd {
+		background-color: #d9d9d9;
+	}
+	#profile .rowEven {
+		background-color: #bfbfbf;
+	}
+
+	/* Style the icon and text columns */
+	#profile .tableIcon {
+		width: 50px;
+		min-width: 50px;
+		text-align: center;
+	}
+	#profile .tableText {
+		width: 425px;
+		min-width: 425px;
+	}
+	#profile .tableText br {
+		display: none;
+	}
+
+	/* Style the different layouts between larger and smaller displays */
+	#profile .aboutMe .tableText,
+	#profile .skillsAppear .tableText {
+		margin-right: 0.5rem;
+		text-align: left;
+	}
+	#profile .skillsDisappear .tableText {
+		margin-left: 0.5rem;
+		text-align: right;
+	}
+	#profile .skillsAppear {
+		display: none;
+	}
+
+	/* Make sure all text is centered */
+	#profile .education {
+		margin-bottom: 0.65rem;
+		text-align: center;
+	}
+
+	/* Style the education */
+	#profile .PSU,
+	#profile .CCAC {
+		display: inline-block;
+		max-width: 704px;
+		min-width: 350px;
+		width: 100%;
+		margin: 0.25rem auto;
+		padding: 1rem 0.75rem;
+		border: 1px solid #aaaaaa;
+	}
+	#profile .PSU {
+		border-top-left-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+		background-image: linear-gradient(to bottom, #041e42 0%, #041e42 50%, white 50%, white 100%);
+	}
+	#profile .CCAC {
+		border-top-right-radius: 1.5rem;
+		border-bottom-right-radius: 1.5rem;
+		background-image: linear-gradient(to bottom, #c41230 0%, #c41230 50%, white 50%, white 100%);
+	}
+	#profile .PSU img,
+	#profile .CCAC img {
+		display: inline-block;
+		height: 3.25rem;
+		margin: 0.75rem auto 0.25rem auto;
+	}
+	#profile .PSU p,
+	#profile .CCAC p {
+		line-height: 1.3;
+		text-align: center;
+		font-weight: 500;
+	}
+	#profile .educationTop,
+	#profile .educationTopFull,
+	#profile .educationTopSimplified {
+		color: white;
+	}
+	#profile .educationTopSimplified,
+	#profile .educationBottomSimplified {
+		display: none;
+	}
+
+	/* Style the completed courses section */
+	#profile .completedCourses {
+		text-align: center;
+	}
+
+
+
+/* Style the Career tab elements */
+
+	/* Style the time input */
+	#career h3 input {
+		display: inline;
+		border: none;
+		padding: none;
+		background-color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+	}
+
+	/* Make sure all text is centered */
+	#career .professional {
+		margin-bottom: 0.65rem;
+		text-align: center;
+	}
+
+	/* Style the professional experiences */
+	#career .sensia,
+	#career .halliburton,
+	#career .murtech {
+		display: inline-block;
+		min-width: 350px;
+		margin: 0.125rem 0;
+		padding: 1rem 0.75rem;
+		border: 1px solid #aaaaaa;
+	}
+	#career .sensia {
+		max-width: 1412px;
+	}
+	#career .halliburton,
+	#career .murtech {
+		max-width: 704px;
+	}
+	#career .sensia {
+		border-top-left-radius: 1.5rem;
+		border-top-right-radius: 1.5rem;
+		background-color: #f6e6ff;
+	}
+	#career .halliburton {
+		border-bottom-left-radius: 1.5rem;
+		background-color: #fde8e9;
+	}
+	#career .murtech {
+		border-bottom-right-radius: 1.5rem;
+		background-color: #e6f1ff;
+	}
+	#career .sensia img,
+	#career .halliburton img {
+		display: inline-block;
+		height: 1rem;
+		margin: 0.5rem auto;
+	}
+	#career .murtech img {
+		display: inline-block;
+		height: 1.3rem;
+		margin: 0.35rem auto;
+	}
+	#career .sensia p,
+	#career .halliburton p,
+	#career .murtech p {
+		margin-bottom: 0.75rem;
+		line-height: 1.3;
+		text-align: center;
+	}
+
+	/* Style the table that houses the job positions and dates */
+	#career .professional table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		line-height: 1.3;
+	}
+
+	/* Style the different position and dates sections */
+	#career .jobPosition {
+		width: 50%;
+		margin: 0;
+		padding-right: 0.75rem;
+		border-right: 1px solid black;
+		text-align: right;
+	}
+	#career .jobDates {
+		width: 50%;
+		margin: 0;
+		padding-left: 0.75rem;
+		text-align: left;
+	}
+
+	/* Hide simplified table setup unless on smaller display */
+	#career .jobBreakdownSimplified {
+		display: none;
+	}
+
+	/* Style the small logos */
+	#career .smallLogos {
+		display: flex;
+		justify-content: center;
+		max-width: 1412px;
+		min-width: 350px;
+		margin: 0.125rem auto;
+		padding: 1rem 0 0.3rem;
+		/* padding: 1rem;
+		border: 1px solid #aaaaaa;
+		border-bottom-left-radius: 1.5rem;
+		border-bottom-right-radius: 1.5rem;
+		background-color: #f2f2f2; */
+		align-items: center;
+		font-weight: 600;
+	}
+	#career .smallLogos img {
+		height: 1.75rem;
+	}
+	#career .smallLogos input {
+		display: inline;
+		border: none;
+		padding: none;
+		background-color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+	}
+
+	/* Style the professional references */
+	#career .references {
+		display: inline-block;
+		margin: 0 auto;
+	}
+	#career .references p {
+		display: inline-block;
+		min-width: 350px;
+		margin: 0.125rem 0;
+		padding: 1rem;
+		border: 1px solid #aaaaaa;
+		background-color: #e5eee5;
+		text-align: center;
+		line-height: 1.2;
+	}
+	#career .reference1 {
+		border-top-left-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+	}
+	#career .reference4 {
+		border-top-right-radius: 1.5rem;
+		border-bottom-right-radius: 1.5rem;
+	}
+
+	/* Style the image resume section */
+	#career .myResume {
+		margin: -0.25rem auto 0.75rem;
+		font-size: 1rem;
+		text-align: center;
+	}
+	#career .myResume	a.targetDefault {
+		display: none;
+	}
+
+	/* Style the text resume section */
+	#career .resume {
+		width: 100%;
+		max-width: 800px;
+		padding: 2.25rem;
+		margin: 1rem auto 1.5rem;
+		border: 1px solid #aaaaaa;
+		box-shadow: 5px 5px 5px black;
+		background-color: #f2f2f2;
+		font-size: 0.92rem;
+	}
+	#career .resume li {
+    	list-style-type: square;
+		padding-left: 0.25rem;
+	}
+	#career .resumeInfo {
+		display: flex;
+		justify-content: space-between;
+	}
+	#career span.show,
+	#career span.showEducation {
+		display: none;
+	}
+	#career span.rightText {
+		float: right;
+	}
+	#career h3.myName {
+		margin-bottom: 0.25rem;
+	}
+	#career .resumeSection h2 {
+		padding-bottom: 0.75rem;
+		font-size: 1rem;
+	}
+	#career .resume ul {
+		padding: 0.75rem 0.5rem;
+	}
+	#career .resume ul.lastList {
+		padding-bottom: 0;
+	}
+
+	/* Style the images and related text */
+	#career figure {
+		text-align: center;
+	}
+	#career .blowerUnit,
+	#career .facepiece {
+		height: auto;
+		margin-top: 0.5rem;
+	}
+	#career .blowerUnit {
+		width: 100%;
+		max-width: 750px;
+	}
+	#career .facepiece {
+		width: 70%;
+		max-width: 475px;
+	}
+	#career .hyperlink {
+		display: block;
+		margin-top: -0.5rem;
+		text-align: center;
+	}
+	#career .CADknife {
+		width: 100%;
+		max-width: 500px;
+	}
+
+
+
+/* Style the Hobbies tab elements */
+
+	/* Style the hyperlinks */
+	#hobbies .hyperlink {
+		display: block;
+		margin-top: -0.5rem;
+		text-align: center;
+	}
+
+	/* Center images and captions */
+	#hobbies img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Style the lists on the Hobbies tab */
+	#hobbies ul {
+		padding-left: 1rem;
+	}
+	#hobbies ul li ul {
+		padding-left: 0.25rem;
+	}
+	#hobbies ul li:first-child {
+		margin-top: 0.5rem;
+	}
+	#hobbies ul li:last-child {
+		margin-bottom: 1rem;
+	}
+
+	/* Style the SS images */
+	#hobbies .SSdyno,
+	#hobbies .LSAinstall,
+	#hobbies .SSmeet {
+		height: auto;
+		width: 100%;
+		max-width: 750px;
+	}
+
+	/* Style the SS video */
+	#hobbies .SSdynoVideo {
+		display: block;
+		height: auto;
+		width: 100%;
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
+	/* Style the Trailblazer images */
+	#hobbies .TBdismantle,
+	#hobbies .id10,
+	#hobbies .dls {
+		height: auto;
+		width: 100%;
+	}
+	#hobbies .TBdismantle {
+		max-width: 725px;
+	}
+	#hobbies .id10 {
+		max-width: 550px;
+	}
+	#hobbies .dls {
+		max-width: 725px;
+	}
+
+
+
+/* Style the Notes tab elements */
+
+	/* Change the h3 headings */
+	#notes .changelog h3 {
+		margin-bottom: 1rem;
+	}
+	#notes .changelog a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	/* Style the section element on the Notes tab */
+	#notes aside {
+		margin-bottom: 1.25rem;
+		text-align: center;
+	}
+	#notes aside button {
+		padding: 0.4rem 0.65rem;
+		border-radius: 0.8rem;
+		border: none;
+		outline: none;
+		background-color: #041e42;
+		color: white;
+		font-weight: 500;
+	}
+
+	/* Apply browser styling on Notes tab */
+		/* Style the tab */
+		#notes .browserBar {
+			display: inline-flex;
+			overflow: hidden;
+			width: 100%;
+			height: 3.5rem;
+		}
+
+		/* Style the buttons that are used to open the tab content */
+		#notes .browserBar button {
+		  	outline: none;
+			transition: 0.2s;
+			width: 4rem;
+			margin-bottom: 1px;
+			padding: 0.2rem 0.2rem;
+			border: 1px solid transparent;
+			cursor: pointer;
+			text-align: center;
+			font-size: 1.75rem;
+		}
+		#notes .browserBar.browserHide button {
+			background-color: #041e42;
+			color: white;
+		}
+
+		/* Change background color of buttons on hover */
+		#notes .browserBar button:hover:not([disabled]) {
+			background-color: #54657c !important;
+			color: white;
+		}
+
+		/* Create an active/current tab class */
+		#notes #browserBar button.active {
+			margin-bottom: -1px;
+			border: 1px solid #cccccc;
+			border-bottom: 1px solid #f2f2f2 !important;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			background-color: #f2f2f2 !important;
+		  	color: #041e42 !important;
+		}
+
+		/* Style the "Desktop:" and "Mobile:" sections */
+		#notes .browserDesktop,
+		#notes .browserMobile {
+			white-space: nowrap;
+			pointer-events: none;
+			background-color: white !important;
+			color: black !important;
+			font-size: 1rem !important;
+			font-weight: bold;
+		}
+		#notes .browserDesktop {
+			width: 6.35rem !important;
+		}
+		#notes .browserMobile {
+			width: 5.5rem !important;
+		}
+
+		/* Style the browser tabs */
+		#notes .browserLink {
+			font-size: 1.75rem;
+			color: white;
+		}
+		#notes .browserInfo {
+			background-color: #262626 !important;
+		}
+		#notes .browserChrome {
+			background-color: #4d4400 !important;
+		}
+		#notes .browserFirefox {
+			background-color: #482605 !important;
+		}
+		#notes .browserEdge {
+			background-color: #00464d !important;
+		}
+		#notes .browserIE {
+			background-color: #083344 !important;
+		}
+		#notes .browserOpera {
+			background-color: #4d0000 !important;
+		}
+		#notes .browserSafari {
+			background-color: #021d4a !important;
+		}
+		#notes .browserAndroid {
+			background-color: #313b11 !important;
+		}
+		#notes .browserApple {
+			background-color: #262626 !important;
+		}
+
+		/* Style the border radius differences for the first and last tabs of each section */
+		#notes .firstTab {
+			border-top-left-radius: 0.8rem;
+		}
+		#notes .lastTab {
+			border-top-right-radius: 0.8rem;
+		}
+
+		/* Style the pics for the browser icons */
+		#notes .browserLink img {
+			height: 2rem;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 0.3rem;
+		}
+
+		/* Style the browser dropdown content */
+		#notes .browserContent {
+		  	display: none;
+			margin-top: -1px;
+			padding: 0 1rem;
+			border: 1px solid #cccccc;
+			border-radius: 0.8rem;
+			border-top-left-radius: 0;
+			background-color: #f2f2f2;
+			font-weight: bold;
+		}
+		#notes .browserContent img {
+			height: 1.5rem;
+			width: auto;
+			padding: 0;
+			margin: 0 0.64rem 0 0.16rem;
+		}
+		#notes .browserContent p {
+			display: inline-flex;
+			align-items: center;
+			margin-top: 1rem;
+		}
+		#notes .browserContent p span {
+			position: relative;
+			margin: 0;
+			padding: 0;
+		}
+		#notes .browserContent ul {
+			margin: 0.5rem 0 1rem 1.7rem;
+			font-weight: normal;
+		}
+
+	/* Style the details elements */
+	#notes details {
+		overflow: hidden; /* DO NOT DELETE!!! The details tag causes overflow when page is resized for a small device */
+	}
+
+	/* Style the summary elements */
+	#notes summary {
+		outline: none;
+		padding: 0.25rem 0.65rem 0.4rem;
+		border-radius: 0.75rem;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	#notes summary:hover {
+		background-color: #54657c /* #041e42 #ffeb99 */;
+		color: white;
+	}
+
+	/* Style the Code Names portion */
+	#notes .codeName {
+		padding-left: 0.5rem;
+		font-weight: bold;
+		font-style: italic;
+	}
+	#notes .codeName p {
+		margin-top: 0.25rem;
+		margin-bottom: 0.75rem;
+	}
+
+	/* Change the area around changelog and elements */
+	#notes .changelogList {
+		margin-bottom: -0.5rem;
+	}
+	#notes details ul {
+		padding-left: 1.25rem;
+		padding-right: 0.25rem;
+	}
+
+	/* Styling tooltip for Code Names on Notes tab */
+
+		/* Tooltip container */
+		#notes .codeName .tooltip {
+			position: relative;
+			display: inline-block;
+			margin-top: 0.25rem;
+			border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+		}
+
+		/* Tooltip text */
+		#notes .codeName .tooltip .tooltipText {
+			visibility: hidden;
+			width: 475px;
+			padding: 0.75rem 0.75rem;
+			border: 1px solid black;
+			border-radius: 0.5rem;
+			background-color: #404040;
+			color: white;
+			text-align: center;
+
+			/* Position the tooltip text */
+			position: absolute;
+			z-index: 1;
+			top: -0.25rem;
+			left: 100%;
+			margin-left: 0.5rem;
+
+			/* Fade in tooltip */
+			opacity: 0;
+			transition: 0.2s;
+		}
+
+		/* Show the tooltip text when you mouse over the tooltip container */
+		#notes .codeName .tooltip:hover .tooltipText {
+		  	visibility: visible;
+			overflow: visible;
+		  	opacity: 0.95;
+		}
+
+	/* Style the lists on the Notes tab */
+	#notes ul {
+		padding-left: 1rem;
+	}
+	#notes ul li {
+		font-size: 0.9rem;
+	}
+	#notes ul li ul {
+		padding-left: 0.25rem;
+	}
+	#notes ul li:last-child {
+		margin-bottom: 1rem;
+	}
+
+
+
+/* Change things around when the blank area around the tab content disappears */
+@media screen and (max-width: 1600px) {
+	/* Center tabs */
+	nav ul {
+		margin-right: 1rem;
+	}
+
+	body .tab {
+		padding-bottom: 0;
+		box-shadow: 0 0 7px #041e42;
+	}
+
+	body .tabContent {
+		width: 100%;
+		margin: 0;
+		/* padding-right: calc(2.25rem - 100vw + 100%); This is used to stop the shifting when the scrollbar appears; Remove completely to change behavior back to default */
+		border-radius: 0;
+	}
+
+	/* Style the footer info */
+	.infoFooter {
+		width: 100%;
+		margin: 0;
+		/* padding-right: calc(3.25rem - 100vw + 100%); This is used to stop the shifting when the scrollbar appears; Remove completely to change behavior back to default */
+	}
+
+	#home .textBottom {
+		width: 100vw;
+	}
+	#home .textRecent {
+		border-bottom-left-radius: 0;
+	}
+	#home .textUpdate {
+		padding-right: 1rem;
+		border-bottom-right-radius: 0;
+	}
+	#home .textUpdate p {
+		margin-right: -1rem;
+	}
+
+}
+
+/* Change border radius of references on resize */
+@media screen and (max-width: 1500px) {
+	/* Style the education */
+	#profile .PSU,
+	#profile .CCAC {
+		display: block;
+		width: 704px;
+	}
+	#profile .PSU {
+		border-top-right-radius: 1.5rem;
+		border-bottom-left-radius: 0;
+		background-color: #e7f0fe;
+	}
+	#profile .CCAC {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 1.5rem;
+		background-color: #ffe6ea;
+	}
+
+	#career .sensia,
+	#career .smallLogos {
+		width: 704px;
+	}
+	#career .jobBreakdownTable {
+		display: none;
+	}
+	#career .jobBreakdownSimplified {
+		display: inline-block;
+	}
+	#career .jobBreakdownSimplified p {
+		margin-top: -0.3rem;
+		margin-bottom: 0;
+		line-height: 1.3;
+	}
+	#career .references {
+		display: block;
+	}
+	#career .reference1 {
+		border-bottom-left-radius: 0;
+	}
+	#career .reference2 {
+		border-top-right-radius: 1.5rem;
+	}
+	#career .reference3 {
+		border-bottom-left-radius: 1.5rem;
+	}
+	#career .reference4 {
+		border-top-right-radius: 0;
+	}
+
+}
+
+/* Swap around tables and layout when making screen smaller */
+@media screen and (max-width: 1225px) {
+	#profile .profileTable img {
+		display: none;
+	}
+
+}
+@media screen and (max-width: 1010px) {
+	#profile .tableText {
+		width: 90vw;
+		min-width: 0;
+		line-height: 1.2;
+	}
+	#profile .skillsDisappear {
+		display: none;
+	}
+	#profile .skillsAppear {
+		display: inline-block;
+	}
+	#profile .skillsAppear .tableText {
+		padding-right: 0.75rem;
+	}
+
+}
+
+/* Remove browser descriptions when screen is small */
+@media screen and (max-width:850px) {
+	/* Change styling of resume info */
+	#career .resumeInfo {
+		display: block;
+		text-align: center;
+	}
+	#career .resumeInfo span.show {
+		display: inherit;
+	}
+	#career .resumeInfo span.hide {
+		display: none;
+	}
+
+	/* Add space between browser types */
+	#notes .browserLink.browserInfo,
+	#notes .browserLink.browserSafari {
+		margin-right: 0.25rem;
+	}
+	/* Turn off the descriptions */
+	.browserDesktop,
+	.browserMobile {
+		display: none;
+	}
+
+}
+
+/* First major change for smaller screens */
+@media screen and (max-width: 820px) {
+	/* Make sure everything is compatibile and works well with Android and iOS */
+	html {
+		background: #95a1b7;
+		font-size: 14px;
+	}
+
+	/* Style the overall look of tabs */
+	nav {
+		position: absolute;
+		width: 100%;
+		justify-content: center;
+	}
+
+	/* Turn off smann logo and some other things */
+	nav .smannLogo {
+		display: none;
+	}
+
+	/* Return tabs to center */
+	nav ul {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* Change animation for each tab */
+	nav ul li {
+		animation: none !important;
+		padding: 1rem 0.25rem;
+	}
+
+	/* Style for having lines show up on hover */
+	nav ul li a:hover::before,
+	nav ul li a:hover::after {
+		display: none;
+	}
+
+	nav .tabLinks {
+		display: none;
+	}
+
+	.modalBody a.targetDefault {
+		display: block;
+	}
+	.modalBody a.targetBlank {
+		display: none;
+	}
+
+	/* Style the tabs' content and make it so the navigation bar is 100% width, but the contents can be a different width */
+	body .container {
+		height: 100%;
+		background: linear-gradient(to top, #95a1b7 0%, #95a1b7 50%, #041e42 50%, #041e42 100%);
+	}
+
+	/* Restyle the tabs' content */
+	body .tabContent {
+		width: 100%;
+		padding: 1rem 1rem;
+	}
+
+	/* Style the footer info */
+	.infoFooter {
+		height: 60px;
+		padding: 0 1.5rem;
+		background-color: transparent;
+	}
+	.infoFooter a,
+	.infoFooter div .modalButton button {
+		display: inline-flex;
+		align-items: center;
+		margin-left: 0.5rem;
+		padding: 0.25rem 0.25rem;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+	.infoFooter div .modalButton button i {
+		margin-right: 0.25rem;
+	}
+	.infoFooter i {
+		margin-right: 0.25rem;
+		font-size: 1.25rem;
+	}
+	/* Make the "s" in smann logo text a different color */
+	.infoFooter span {
+	  	color: white;
+	}
+
+	/* Style the text areas to turn off backgrounds and borders and to better fit smaller displays */
+	#home .textWelcome b {
+		font-weight: normal;
+	}
+
+	/* Style the welcoming pic on the Home tab */
+	#home .welcomePic {
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	/* Style the text areas to turn off backgrounds and borders and to better fit smaller displays */
+	#home .textBottom {
+		display: inherit;
+		width: 100%;
+		margin: 0;
+	}
+	#home .textRecent p,
+	#home .textUpdate p {
+		margin: 0;
+		padding: 0;
+		background-color: inherit;
+		color: inherit;
+		font-weight: bold;
+		text-align: left;
+	}
+	#home .textWelcome,
+	#home .textRecent,
+	#home .textUpdate {
+		display: inherit;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		background-color: inherit;
+	}
+	#home .textSpacer {
+		display: none;
+	}
+	/* Style the list on the Home tab */
+	#home .textUpdate ul {
+		padding-bottom: 0;
+	}
+
+	/* Change career elements on resize */
+	#career .myResume	a.targetBlank {
+		display: none;
+	}
+	#career .myResume a.targetDefault {
+		display: inherit;
+	}
+	#career .resume {
+		box-shadow: 0 5px 5px -5px black;
+	}
+
+	/* Style summary on click */
+	#notes summary {
+		padding-left: 0;
+	}
+	#notes summary:hover {
+		background-color: inherit;
+	}
+
+	/* Change the Code Name tooltip text style to better fit smaller displays */
+	#notes .codeName .tooltip .tooltipText {
+	  	max-width: 87vw;
+
+		/* Position the tooltip text */
+		top: 0.75rem;
+		left: -6rem;
+		margin-top: 0.75rem;
+	}
+
+}
+
+/* Change around Career tab elements */
+@media screen and (max-width: 760px) {
+	#profile .PSU,
+	#profile .CCAC {
+		display: block;
+		max-width: 100%;
+		width: 350px;
+		margin: 0.25rem auto;
+	}
+	#profile .PSU p,
+	#profile .CCAC p {
+		line-height: 1.3;
+		text-align: center;
+	}
+	#profile .PSU span,
+	#profile .educationTopFull,
+	#profile .educationBottomFull {
+		display: none;
+	}
+	#profile .educationTopSimplified,
+	#profile .educationBottomSimplified {
+		display: inherit;
+	}
+
+	/* Style the professional experience to better fit smaller displays */
+	#career .brRemove {
+		display: none;
+	}
+	#career .sensia,
+	#career .halliburton,
+	#career .murtech,
+	#career .references p {
+		display: block;
+		width: 350px;
+		max-width: 100%;
+		margin: 0.25rem auto;
+	}
+	#career .halliburton {
+		border-bottom-left-radius: 0;
+	}
+	#career .murtech {
+		border-bottom-left-radius: 1.5rem;
+	}
+	#career .smallLogos {
+		width: 350px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	#career .reference1 {
+		border-top-right-radius: 1.5rem;
+		border-bottom-left-radius: 0;
+	}
+	#career .reference2 {
+		border-top-right-radius: 0;
+	}
+	#career .reference3 {
+		border-bottom-left-radius: 0;
+	}
+	#career .reference4 {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 1.5rem;
+	}
+
+	/* Change styling of resume sections */
+	#career .resumeSection span.show {
+		display: inherit;
+	}
+	#career .resumeSection span.hide {
+		display: none;
+	}
+
+}
+
+/* Second major change for smaller screens */
+@media screen and (max-width: 625px) {
+	/* Create animation for the splash screen */
+	.splashText {
+		top: 45%;
+		animation:
+			slideDown 2s linear 0s 1 forwards,
+			fadeIn 0.75s ease-in 0s 1 forwards,
+			fadeOut 0.5s ease-out 1.5s 1 forwards;
+		will-change: auto;
+		font-size: 75px;
+	}
+	.splashText .firstLetter,
+	.splashText .lastName {
+		display: block;
+		animation: none;
+	}
+	.splashScreen {
+		animation: fadeOut 0.25s ease-in-out 2s 1 forwards;
+	}
+
+	/* Style the overall look of tabs */
+	nav {
+		margin: 0;
+		padding: 0.5rem;
+		font-size: 1.25rem;
+		text-align: center;
+	}
+	nav .navTabs {
+		height: 60px;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Creating a way to do equal width tabs */
+	nav ul {
+		display: table;
+		table-layout: fixed;
+    	width: 100%;
+		align-items: center;
+	}
+
+  /* Change animation and styling of tabs */
+	nav ul li {
+		display: table-cell;
+		padding: 0.25rem;
+		text-align: center;
+	}
+
+	/* Style the tab link areas */
+	nav ul li a {
+		height: 100%;
+	  	padding: 0;
+	}
+
+	/* Style the tab icons themselves */
+	nav ul li a i {
+		width: 100%;
+	}
+
+	/* Create small tab names that are below the icons */
+	nav ul li a span {
+		display: block;
+		padding-top: 0.25rem;
+		letter-spacing: 1px;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+	nav ul li a span .extraSpace {
+		display: none;
+	}
+
+	/* Style active tabs */
+	body .tabsList li.active {
+		margin: 0;
+	}
+
+	/* Style footer information */
+	.infoFooter a,
+	.infoFooter div .modalButton button {
+		font-size: 0.85rem;
+	}
+	.infoFooter h1 {
+		display: none;
+	}
+	.infoFooter h2 {
+		display: inline-flex;
+		padding-bottom: 0.1rem;
+		pointer-events: none;
+		font-size: 1.6rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+		color: #041e42;
+	}
+	.infoFooter h2 span {
+		font-weight: normal;
+	}
+
+	/* Turn off "Preferred Contact Method" */
+	.tableText span {
+		display: none;
+	}
+
+	/* Style the text resume section */
+	#career .resume {
+		padding: 1rem;
+	}
+
+	/* Change styling of resume sections */
+	#career .resumeSection h2 {
+		padding-top: 0;
+	}
+	#career span.hideEducation {
+		display: none;
+	}
+	#career span.showEducation {
+		display: inherit;
+	}
+
+	/* Apply browser styling on Notes tab */
+	/* Style the tabs differently for smaller displays */
+	#notes .browserBar {
+	  	height: 3rem;
+	}
+
+	/* Style the buttons that are used to open the tab content differently for smaller displays */
+	#notes .browserBar button {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+
+	/* Style the pics for the browser icons */
+	#notes .browserLink img {
+	  	height: 1.75rem;
+	}
+
+	/* Style the browser dropdown content */
+	#notes .browserContent {
+		border-top-right-radius: 0;
+	}
+	#notes .browserContent img {
+		margin: 0;
+	}
+	#notes .browserContent ul {
+		margin-left: 0;
+	}
+
+	/* Style the Code Names portion */
+	#notes .codeName {
+		padding-left: 0;
+	}
+
+	/* Style the list elements */
+	#notes details ul {
+		padding-left: 0.75rem;
+	}
+
+}
+
+/* Change some other things around on very small displays */
+@media screen and (max-width: 405px) {
+	/* Remove header and footer icon descriptions on very small displays */
+	nav {
+		font-size: 2.25rem;
+	}
+	nav ul li a span {
+		display: none;
+	}
+	.infoFooter a,
+	.infoFooter div .modalButton button {
+		margin-left: 1.5rem;
+	}
+	.infoFooter a span,
+	.infoFooter div .modalButton button span {
+		display: none;
+	}
+	.infoFooter i {
+		padding-left: 0.25rem;
+		font-size: 1.5rem;
+	}
+
+	/* Add a line break to the middle of the LinkedIn link on Profile tab */
+	#profile .tableText br {
+		display: block;
+	}
+
+}
