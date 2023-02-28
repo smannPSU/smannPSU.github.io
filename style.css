@@ -1556,6 +1556,7 @@ figcaption {
 	}
 	#notes summary:hover {
 		background-color: inherit;
+        color: inherit;
 	}
 
 	/* Change the Code Name tooltip text style to better fit smaller displays */
